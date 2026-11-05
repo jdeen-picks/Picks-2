@@ -1,0 +1,156 @@
+{
+ "generated": "2026-11-05T13:38:01Z",
+ "date": "2026-11-05",
+ "matches": [
+  {
+   "fixture_id": 1636208,
+   "match": "AC Milan v Ferencvarosi TC",
+   "league": "Europa League",
+   "kickoff": "2026-11-05T17:45:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1636211,
+   "match": "Anderlecht v Red Bull Salzburg",
+   "league": "Europa League",
+   "kickoff": "2026-11-05T17:45:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1636254,
+   "match": "Crystal Palace v 1899 Hoffenheim",
+   "league": "Europa League",
+   "kickoff": "2026-11-05T17:45:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1636286,
+   "match": "Levski Sofia v Jagiellonia",
+   "league": "Europa League",
+   "kickoff": "2026-11-05T17:45:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1636289,
+   "match": "Lillestrom v Plzen",
+   "league": "Europa League",
+   "kickoff": "2026-11-05T17:45:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1636302,
+   "match": "NEC Nijmegen v Omonia Nicosia",
+   "league": "Europa League",
+   "kickoff": "2026-11-05T17:45:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1636319,
+   "match": "Real Sociedad v Lyon",
+   "league": "Europa League",
+   "kickoff": "2026-11-05T17:45:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1636337,
+   "match": "Sparta Praha v Bournemouth",
+   "league": "Europa League",
+   "kickoff": "2026-11-05T17:45:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1636376,
+   "match": "Aarhus v SC Braga",
+   "league": "Conference League",
+   "kickoff": "2026-11-05T17:45:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1636383,
+   "match": "Atalanta v Kairat Almaty",
+   "league": "Conference League",
+   "kickoff": "2026-11-05T17:45:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1636399,
+   "match": "FK Crvena Zvezda v Inter Club d'Escaldes",
+   "league": "Conference League",
+   "kickoff": "2026-11-05T17:45:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1636439,
+   "match": "KuPS v Gent",
+   "league": "Conference League",
+   "kickoff": "2026-11-05T17:45:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1636444,
+   "match": "Lincoln Red Imps FC v HNK Hajduk Split",
+   "league": "Conference League",
+   "kickoff": "2026-11-05T17:45:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1636448,
+   "match": "FC Midtjylland v Ajax",
+   "league": "Conference League",
+   "kickoff": "2026-11-05T17:45:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  }
+ ],
+ "slip": null,
+ "record": {
+  "wins": 0,
+  "losses": 0,
+  "pending": 0,
+  "profit": 0.0,
+  "settled": 0
+ },
+ "api_calls": 71,
+ "requests_remaining": "75"
+}
