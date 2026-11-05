@@ -1,0 +1,22 @@
+{
+  "api_base": "https://v3.football.api-sports.io",
+  "bookmaker_id": 8,
+  "max_matches_per_day": 14,
+  "form_games": 8,
+  "leagues": {
+    "39":  {"name": "Premier League",   "key": "England"},
+    "140": {"name": "La Liga",          "key": "Spain"},
+    "78":  {"name": "Bundesliga",       "key": "Germany"},
+    "135": {"name": "Serie A",          "key": "Italy"},
+    "61":  {"name": "Ligue 1",          "key": "France"},
+    "94":  {"name": "Primeira Liga",    "key": "Portugal"},
+    "88":  {"name": "Eredivisie",       "key": "Netherlands"},
+    "144": {"name": "Belgian Pro League","key": "Belgium"},
+    "203": {"name": "Super Lig",        "key": "Turkey"},
+    "179": {"name": "Scottish Premiership","key": "Scotland"},
+    "2":   {"name": "Champions League", "key": "Champions League", "european": true},
+    "3":   {"name": "Europa League",    "key": "Europa League",    "european": true},
+    "848": {"name": "Conference League","key": "Conference League","european": true}
+  },
+  "settings": {}
+}
