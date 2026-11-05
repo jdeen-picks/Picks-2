@@ -1,0 +1,30 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Daily Match Picks</title>
+<style>
+:root{--bg:#f6f7f4;--card:#fff;--ink:#17201b;--mut:#5d6a62;--line:#dfe4dd;--acc:#0b7a4b;--warn:#a85d00;--warnbg:#fff3de;--goodbg:#e3f4ea}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1512;--card:#19211d;--ink:#e8efe9;--mut:#9aa89f;--line:#2a352f;--acc:#3ac583;--warn:#f0b35a;--warnbg:#33260f;--goodbg:#12301f}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 system-ui,sans-serif;padding:14px 16px 60px}
+.w{max-width:720px;margin:0 auto}h1{font-size:22px;margin:6px 0}.mut{color:var(--mut);font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
+.n{background:var(--warnbg);border-left:4px solid var(--warn);padding:10px 12px;border-radius:8px;font-size:14px}
+.row{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}.b{padding:2px 9px;border-radius:99px;font-size:13px;font-weight:700;background:var(--line);color:var(--mut)}
+.ok{background:var(--goodbg);color:var(--acc)}.chk{background:var(--warnbg);color:var(--warn)}.big{font-size:20px;font-weight:700;margin:6px 0}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:5px 4px;text-align:right;border-bottom:1px solid var(--line)}td:first-child,th:first-child{text-align:left}
+</style></head><body><div class="w">
+<h1>Daily Match Picks</h1>
+<p class="n"><b>18+ only. No pick is guaranteed or risk free.</b> These are probabilities from an experimental model with no proven track record yet. Never stake money you cannot afford to lose. Check the laws that apply to you before betting.</p>
+<div id="rec" class="card"></div><div id="slip"></div><div id="list"></div>
+<p class="mut" id="gen"></p>
+<script>
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function pct(x){return Math.round(x*100)+"%"}
+Promise.all([fetch("data/picks.json").then(r=>r.json()),fetch("data/history.json").then(r=>r.json())]).then(function(a){
+  var d=a[0],h=a[1],r=d.record;
+  document.getElementById("rec").innerHTML="<b>Track record (all picks, logged before kick-off)</b><p>"+r.wins+" won, "+r.losses+" lost, "+r.pending+" pending. Profit at the suggested flat stake: "+(r.profit>=0?"+":"")+r.profit+" GHS.</p><p class='mut'>"+(r.settled<100?"Only "+r.settled+" settled picks so far. Treat this as noise until it passes 100.":"")+"</p>"+
+   (h.length?"<table><tr><th>Date</th><th>Pick</th><th>Odds</th><th>Result</th></tr>"+h.slice(-15).reverse().map(function(x){return"<tr><td>"+esc(x.date)+"</td><td>"+esc(x.match)+": "+esc(x.market)+"</td><td>"+x.odds.toFixed(2)+"</td><td>"+esc(x.result)+(x.score?" ("+esc(x.score)+")":"")+"</td></tr>"}).join("")+"</table>":"");
+  if(d.slip)document.getElementById("slip").innerHTML="<div class='card'><b>Best two-match slip</b><p class='big'>"+d.slip.odds.toFixed(2)+" odds</p><p>"+d.slip.legs.map(function(l){return esc(l.match)+": "+esc(l.market)+" @ "+l.odds.toFixed(2)}).join("<br>")+"</p><p class='mut'>Both win about "+pct(d.slip.p)+" of the time.</p></div>";
+  document.getElementById("list").innerHTML=d.matches.length?d.matches.map(function(m){
+    var b=m.pick?"<span class='b ok'>PICK</span>":m.status==="CHECK DATA"?"<span class='b chk'>CHECK DATA</span>":"<span class='b'>NO BET</span>";
+    var body=m.pick?"<p class='big'>"+esc(m.pick.name)+" @ "+m.pick.odds.toFixed(2)+"</p><p class='mut'>Chance ~"+pct(m.pick.blended)+", edge "+(m.pick.edge*100).toFixed(1)+"%.</p>":m.status==="CHECK DATA"?"<p class='mut'>Model and market disagree strongly. Probably bad data. No pick.</p>":"<p class='mut'>Nothing passes the filters.</p>";
+    return"<div class='card'><div class='row'><b>"+esc(m.match)+"</b>"+b+"</div><div class='mut'>"+esc(m.league)+(m.xg?" - expected goals "+m.xg[0]+" to "+m.xg[1]:"")+"</div>"+body+"</div>"}).join(""):"<div class='card'>No matches analysed yet today.</div>";
+  document.g
