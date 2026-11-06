@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T08:48:30Z",
+ "generated": "2026-11-06T14:52:05Z",
  "date": "2026-11-06",
  "matches": [
   {
@@ -102,5 +102,5 @@
   "settled": 0
  },
  "api_calls": 46,
- "requests_remaining": "81"
+ "requests_remaining": "67"
 }
