@@ -69,10 +69,13 @@ def parse_odds(resp):
 def build_match(api, fx, cfg, lg):
     hid, aid = fx["teams"]["home"]["id"], fx["teams"]["away"]["id"]
     fid = fx["fixture"]["id"]; n = cfg.get("form_games", 8)
-    hf = api.get("/fixtures", team=hid, last=n+2); af = api.get("/fixtures", team=aid, last=n+2)
+    season = fx["league"]["season"]
+    hf = api.get("/fixtures", team=hid, season=season); af = api.get("/fixtures", team=aid, season=season)
     hf = sorted(hf, key=lambda f: f["fixture"]["timestamp"], reverse=True); af = sorted(af, key=lambda f: f["fixture"]["timestamp"], reverse=True)
     h_n, h_gf, h_ga = team_form(hf, hid, n); a_n, a_gf, a_ga = team_form(af, aid, n)
-    h2h = h2h_stats(api.get("/fixtures/headtohead", h2h=f"{hid}-{aid}", last=5), hid)
+    h2h_all = api.get("/fixtures/headtohead", h2h=f"{hid}-{aid}")
+    h2h_all = sorted(h2h_all, key=lambda f: f["fixture"]["timestamp"], reverse=True)[:5]
+    h2h = h2h_stats(h2h_all, hid)
     inj = api.get("/injuries", fixture=fid)
     hi = sum(1 for i in inj if i["team"]["id"] == hid); ai = sum(1 for i in inj if i["team"]["id"] == aid)
     odds = parse_odds(api.get("/odds", fixture=fid, bookmaker=cfg.get("bookmaker_id", 8)))
