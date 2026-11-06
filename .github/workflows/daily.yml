@@ -5,6 +5,9 @@ on:
   workflow_dispatch: {}       # lets you press "Run workflow" by hand
 permissions:
   contents: write
+concurrency:
+  group: daily-picks
+  cancel-in-progress: false
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -23,4 +26,5 @@ jobs:
           git config user.email "picks-bot@users.noreply.github.com"
           git add docs/data
           git diff --cached --quiet || git commit -m "Daily picks"
-          git push
+          git pull --rebase -X theirs origin main
+          git push origin main
