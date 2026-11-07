@@ -1,92 +1,142 @@
 {
- "generated": "2026-11-06T15:23:00Z",
- "date": "2026-11-06",
+ "generated": "2026-11-07T08:44:53Z",
+ "date": "2026-11-07",
  "matches": [
   {
-   "fixture_id": 1584462,
-   "match": "Gaziantep FK v Kas\u0131mpa\u015fa",
+   "fixture_id": 1584460,
+   "match": "Ey\u00fcpspor v Kocaelispor",
    "league": "Super Lig",
-   "kickoff": "2026-11-06T17:00:00+00:00",
+   "kickoff": "2026-11-07T10:30:00+00:00",
    "status": "Missing data",
    "xg": null,
    "pick": null,
    "markets": []
   },
   {
-   "fixture_id": 1552216,
-   "match": "Willem II v PEC Zwolle",
-   "league": "Eredivisie",
-   "kickoff": "2026-11-06T19:00:00+00:00",
-   "status": "Missing data",
-   "xg": null,
-   "pick": null,
-   "markets": []
-  },
-  {
-   "fixture_id": 1575218,
-   "match": "Hamburger SV v Borussia M\u00f6nchengladbach",
-   "league": "Bundesliga",
-   "kickoff": "2026-11-06T19:30:00+00:00",
-   "status": "Missing data",
-   "xg": null,
-   "pick": null,
-   "markets": []
-  },
-  {
-   "fixture_id": 1550196,
-   "match": "Venezia v Udinese",
-   "league": "Serie A",
-   "kickoff": "2026-11-06T19:45:00+00:00",
-   "status": "Missing data",
-   "xg": null,
-   "pick": null,
-   "markets": []
-  },
-  {
-   "fixture_id": 1552817,
-   "match": "Toulouse v Strasbourg",
-   "league": "Ligue 1",
-   "kickoff": "2026-11-06T19:45:00+00:00",
-   "status": "Missing data",
-   "xg": null,
-   "pick": null,
-   "markets": []
-  },
-  {
-   "fixture_id": 1558677,
-   "match": "Standard Liege v SK Beveren",
-   "league": "Belgian Pro League",
-   "kickoff": "2026-11-06T19:45:00+00:00",
-   "status": "Missing data",
-   "xg": null,
-   "pick": null,
-   "markets": []
-  },
-  {
-   "fixture_id": 1557460,
-   "match": "Everton v Coventry",
+   "fixture_id": 1557463,
+   "match": "Leeds v Tottenham",
    "league": "Premier League",
-   "kickoff": "2026-11-06T20:00:00+00:00",
+   "kickoff": "2026-11-07T12:30:00+00:00",
    "status": "Missing data",
    "xg": null,
    "pick": null,
    "markets": []
   },
   {
-   "fixture_id": 1570450,
-   "match": "Sevilla v Alaves",
+   "fixture_id": 1570447,
+   "match": "Malaga v Racing Santander",
    "league": "La Liga",
-   "kickoff": "2026-11-06T20:00:00+00:00",
+   "kickoff": "2026-11-07T13:00:00+00:00",
    "status": "Missing data",
    "xg": null,
    "pick": null,
    "markets": []
   },
   {
-   "fixture_id": 1575539,
-   "match": "Famalicao v Arouca",
-   "league": "Primeira Liga",
-   "kickoff": "2026-11-06T20:45:00+00:00",
+   "fixture_id": 1584465,
+   "match": "Samsunspor v Konyaspor",
+   "league": "Super Lig",
+   "kickoff": "2026-11-07T13:00:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1550188,
+   "match": "Cagliari v Frosinone",
+   "league": "Serie A",
+   "kickoff": "2026-11-07T14:00:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1550195,
+   "match": "Torino v Lecce",
+   "league": "Serie A",
+   "kickoff": "2026-11-07T14:00:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1575212,
+   "match": "Borussia Dortmund v SV Elversberg",
+   "league": "Bundesliga",
+   "kickoff": "2026-11-07T14:30:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1575213,
+   "match": "RB Leipzig v FC Augsburg",
+   "league": "Bundesliga",
+   "kickoff": "2026-11-07T14:30:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1575217,
+   "match": "FSV Mainz 05 v Bayern M\u00fcnchen",
+   "league": "Bundesliga",
+   "kickoff": "2026-11-07T14:30:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1575220,
+   "match": "SC Paderborn 07 v Eintracht Frankfurt",
+   "league": "Bundesliga",
+   "kickoff": "2026-11-07T14:30:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1556702,
+   "match": "Dundee Utd v Motherwell",
+   "league": "Scottish Premiership",
+   "kickoff": "2026-11-07T15:00:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1556703,
+   "match": "ST Johnstone v Dundee",
+   "league": "Scottish Premiership",
+   "kickoff": "2026-11-07T15:00:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1557457,
+   "match": "Arsenal v Hull City",
+   "league": "Premier League",
+   "kickoff": "2026-11-07T15:00:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1557461,
+   "match": "Fulham v Newcastle",
+   "league": "Premier League",
+   "kickoff": "2026-11-07T15:00:00+00:00",
    "status": "Missing data",
    "xg": null,
    "pick": null,
@@ -101,6 +151,6 @@
   "profit": 0.0,
   "settled": 0
  },
- "api_calls": 46,
- "requests_remaining": "41"
+ "api_calls": 71,
+ "requests_remaining": "62"
 }
