@@ -1,30 +1,93 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Daily Match Picks</title>
 <style>
-:root{--bg:#f6f7f4;--card:#fff;--ink:#17201b;--mut:#5d6a62;--line:#dfe4dd;--acc:#0b7a4b;--warn:#a85d00;--warnbg:#fff3de;--goodbg:#e3f4ea}
-@media(prefers-color-scheme:dark){:root{--bg:#0f1512;--card:#19211d;--ink:#e8efe9;--mut:#9aa89f;--line:#2a352f;--acc:#3ac583;--warn:#f0b35a;--warnbg:#33260f;--goodbg:#12301f}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 system-ui,sans-serif;padding:14px 16px 60px}
-.w{max-width:720px;margin:0 auto}h1{font-size:22px;margin:6px 0}.mut{color:var(--mut);font-size:14px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
-.n{background:var(--warnbg);border-left:4px solid var(--warn);padding:10px 12px;border-radius:8px;font-size:14px}
-.row{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}.b{padding:2px 9px;border-radius:99px;font-size:13px;font-weight:700;background:var(--line);color:var(--mut)}
-.ok{background:var(--goodbg);color:var(--acc)}.chk{background:var(--warnbg);color:var(--warn)}.big{font-size:20px;font-weight:700;margin:6px 0}
-table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:5px 4px;text-align:right;border-bottom:1px solid var(--line)}td:first-child,th:first-child{text-align:left}
-</style></head><body><div class="w">
-<h1>Daily Match Picks</h1>
-<p class="n"><b>18+ only. No pick is guaranteed or risk free.</b> These are probabilities from an experimental model with no proven track record yet. Never stake money you cannot afford to lose. Check the laws that apply to you before betting.</p>
-<div id="rec" class="card"></div><div id="slip"></div><div id="list"></div>
-<p class="mut" id="gen"></p>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#14181f;--mute:#5b6573;--line:#e3e6eb;--accent:#0b7a4b;--accent-bg:#e4f4ec;--bad:#b3261e;--bad-bg:#fbe9e7;--bar:#d9ede2}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1116;--card:#171b22;--ink:#eceff4;--mute:#9aa4b2;--line:#262c36;--accent:#4cc38a;--accent-bg:#14301f;--bad:#ff8a80;--bad-bg:#3a1a18;--bar:#1d3a2b}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:16px}
+h1{font-size:22px;margin:8px 0 2px}
+.sub{color:var(--mute);font-size:14px;margin:0 0 14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:0 0 14px}
+.top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.match{font-weight:700;font-size:17px;margin:0}
+.meta{color:var(--mute);font-size:13px;margin:2px 0 0}
+.xg{white-space:nowrap;font-size:13px;color:var(--mute);text-align:right}
+.xg b{color:var(--ink);font-size:16px}
+.note{font-size:12.5px;color:var(--mute);margin:8px 0 10px}
+.row{border-top:1px solid var(--line);padding:10px 0}
+.line1{display:flex;justify-content:space-between;gap:8px}
+.name{font-weight:600}
+.pct{font-weight:700;color:var(--accent)}
+.bar{height:6px;background:var(--bar);border-radius:3px;margin:6px 0 8px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent)}
+.line2{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:14px}
+.min{color:var(--mute)}
+input{width:110px;font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+.v{font-weight:700;font-size:13px;padding:2px 8px;border-radius:999px}
+.ok{color:var(--accent);background:var(--accent-bg)}.no{color:var(--bad);background:var(--bad-bg)}
+.pick{background:var(--accent-bg);border-radius:10px;padding:8px 10px;margin:6px 0;font-size:14px}
+.empty,.err{text-align:center;color:var(--mute);padding:28px 10px}
+.foot{color:var(--mute);font-size:12.5px;margin:18px 0 30px}
+h2{font-size:14px;margin:12px 0 2px;text-transform:uppercase;letter-spacing:.04em;color:var(--mute)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Daily Match Picks</h1>
+  <p class="sub" id="sub">Loading...</p>
+  <div id="out"></div>
+  <p class="foot">For 18+ only. These are model estimates, not guarantees, and any bet can lose. Never stake money you cannot afford to lose. Check the price on your bookmaker before betting: a market is only worth taking if the odds are at or above the minimum shown.</p>
+</div>
 <script>
-function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
-function pct(x){return Math.round(x*100)+"%"}
-Promise.all([fetch("data/picks.json").then(r=>r.json()),fetch("data/history.json").then(r=>r.json())]).then(function(a){
-  var d=a[0],h=a[1],r=d.record;
-  document.getElementById("rec").innerHTML="<b>Track record (all picks, logged before kick-off)</b><p>"+r.wins+" won, "+r.losses+" lost, "+r.pending+" pending. Profit at the suggested flat stake: "+(r.profit>=0?"+":"")+r.profit+" GHS.</p><p class='mut'>"+(r.settled<100?"Only "+r.settled+" settled picks so far. Treat this as noise until it passes 100.":"")+"</p>"+
-   (h.length?"<table><tr><th>Date</th><th>Pick</th><th>Odds</th><th>Result</th></tr>"+h.slice(-15).reverse().map(function(x){return"<tr><td>"+esc(x.date)+"</td><td>"+esc(x.match)+": "+esc(x.market)+"</td><td>"+x.odds.toFixed(2)+"</td><td>"+esc(x.result)+(x.score?" ("+esc(x.score)+")":"")+"</td></tr>"}).join("")+"</table>":"");
-  if(d.slip)document.getElementById("slip").innerHTML="<div class='card'><b>Best two-match slip</b><p class='big'>"+d.slip.odds.toFixed(2)+" odds</p><p>"+d.slip.legs.map(function(l){return esc(l.match)+": "+esc(l.market)+" @ "+l.odds.toFixed(2)}).join("<br>")+"</p><p class='mut'>Both win about "+pct(d.slip.p)+" of the time.</p></div>";
-  document.getElementById("list").innerHTML=d.matches.length?d.matches.map(function(m){
-    var b=m.pick?"<span class='b ok'>PICK</span>":m.status==="CHECK DATA"?"<span class='b chk'>CHECK DATA</span>":"<span class='b'>NO BET</span>";
-    var body=m.pick?"<p class='big'>"+esc(m.pick.name)+" @ "+m.pick.odds.toFixed(2)+"</p><p class='mut'>Chance ~"+pct(m.pick.blended)+", edge "+(m.pick.edge*100).toFixed(1)+"%.</p>":m.status==="CHECK DATA"?"<p class='mut'>Model and market disagree strongly. Probably bad data. No pick.</p>":"<p class='mut'>Nothing passes the filters.</p>";
-    return"<div class='card'><div class='row'><b>"+esc(m.match)+"</b>"+b+"</div><div class='mut'>"+esc(m.league)+(m.xg?" - expected goals "+m.xg[0]+" to "+m.xg[1]:"")+"</div>"+body+"</div>"}).join(""):"<div class='card'>No matches analysed yet today.</div>";
-  document.g
+(function(){
+  var out=document.getElementById('out'), sub=document.getElementById('sub');
+  function el(tag,cls,text){var e=document.createElement(tag); if(cls)e.className=cls; if(text!=null)e.textContent=text; return e;}
+  function fmt(iso){try{return new Date(iso).toLocaleString('en-GB',{weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit',timeZone:'Africa/Accra'});}catch(e){return iso||'';}}
+  function pct(x){return Math.round(x*100)+'%';}
+  function shortRow(s){
+    var r=el('div','row'), l1=el('div','line1');
+    l1.appendChild(el('span','name',s.name||s.market)); l1.appendChild(el('span','pct',pct(s.chance)));
+    var bar=el('div','bar'), i=el('i'); i.style.width=Math.min(100,Math.round(s.chance*100))+'%'; bar.appendChild(i);
+    var l2=el('div','line2'); l2.appendChild(el('span','min','Take only if odds are at least '+Number(s.min_odds).toFixed(2)));
+    var inp=el('input'); inp.type='number'; inp.step='0.01'; inp.min='1'; inp.inputMode='decimal'; inp.placeholder='Your odds';
+    var v=el('span');
+    inp.addEventListener('input',function(){
+      var x=parseFloat(inp.value);
+      if(!(x>0)){v.className='';v.textContent='';return;}
+      if(x>=s.min_odds){v.className='v ok';v.textContent='Worth it';}else{v.className='v no';v.textContent='Skip: too low';}
+    });
+    l2.appendChild(inp); l2.appendChild(v);
+    r.appendChild(l1); r.appendChild(bar); r.appendChild(l2); return r;
+  }
+  function render(d){
+    sub.textContent='Updated '+fmt(d.generated)+' (Ghana time) · source: '+(d.source||'football-data.org');
+    var ms=d.matches||[];
+    if(!ms.length){out.appendChild(el('div','card empty','No upcoming games to price right now. The next update runs at 07:00 Ghana time.'));return;}
+    ms.forEach(function(m){
+      var c=el('div','card'), top=el('div','top'), left=el('div');
+      left.appendChild(el('p','match',m.match)); left.appendChild(el('p','meta',(m.league||'')+' · '+fmt(m.kickoff)));
+      top.appendChild(left);
+      if(m.xg){var x=el('div','xg'); x.appendChild(el('div',null,'Expected goals')); x.appendChild(el('b',null,m.xg[0]+' – '+m.xg[1])); top.appendChild(x);}
+      c.appendChild(top);
+      var fg=m.form_games||[0,0];
+      c.appendChild(el('p','note','Based on the last '+fg[0]+' / '+fg[1]+' games, '+(m.h2h_games||0)+' head-to-head games. '+(m.injuries_entered?'Injuries entered.':'Injuries not entered, so check team news.')));
+      if(!m.data_ok){c.appendChild(el('p','note','Not enough data to price this game.'));}
+      if(m.picks&&m.picks.length){c.appendChild(el('h2',null,'Picks at your entered prices'));
+        m.picks.forEach(function(p){c.appendChild(el('div','pick',p.market+' · '+p.outcome+' @ '+Number(p.odds).toFixed(2)+' · '+pct(p.blended)+' chance'));});}
+      if(m.shortlist&&m.shortlist.length){c.appendChild(el('h2',null,'Shortlist: type the price you see'));
+        m.shortlist.slice(0,10).forEach(function(s){c.appendChild(shortRow(s));});}
+      else if(m.data_ok){c.appendChild(el('p','note','No market reaches the 65% shortlist line for this game. Skip it.'));}
+      out.appendChild(c);
+    });
+  }
+  fetch('data/fd_picks.json?t='+Date.now()).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).then(render)
+    .catch(function(e){sub.textContent='';out.appendChild(el('div','card err','Could not load today\'s data ('+e.message+'). Try again in a minute.'));});
+})();
+</script>
+</body>
+</html>
