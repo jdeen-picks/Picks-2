@@ -5,68 +5,107 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Daily Match Picks</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f3f5f1;--card:#fff;--ink:#12201a;--mute:#5d6b63;--line:#e2e8e2;--accent:#0b7a4b;--accent2:#e8b422;--accent-bg:#e4f4ec;--bad:#b3261e;--bad-bg:#fbe9e7;--bar:#d9ede2;--hero1:#0b5d3b;--hero2:#07351f;--shadow:0 6px 20px rgba(10,60,35,.10)}
-@media (prefers-color-scheme:dark){:root{--bg:#0b100d;--card:#141b17;--ink:#eaf1ec;--mute:#93a39a;--line:#233028;--accent:#4cc38a;--accent2:#f0c040;--accent-bg:#14301f;--bad:#ff8a80;--bad-bg:#3a1a18;--bar:#1d3a2b;--hero1:#0d4a2f;--hero2:#05180f;--shadow:0 6px 20px rgba(0,0,0,.4)}}
+:root{--bg:#fdf3f6;--card:#fff;--ink:#2a0d16;--mute:#7a5a65;--line:#f1dce3;--accent:#d81e4f;--accent2:#ff7aa2;--gold:#f2c57c;--accent-bg:#fde7ee;--bad:#9b1c1c;--bad-bg:#fbe9e7;--bar:#f7d5df;--hero1:#f0386a;--hero2:#7d1034;--shadow:0 10px 28px rgba(160,20,70,.14)}
+@media (prefers-color-scheme:dark){:root{--bg:#14070b;--card:#1f0d13;--ink:#fbeaf0;--mute:#c9a0ae;--line:#3a1823;--accent:#ff5c88;--accent2:#ff9ab8;--gold:#f2c57c;--accent-bg:#3a1623;--bad:#ff8a80;--bad-bg:#3a1a18;--bar:#41202c;--hero1:#c01f4f;--hero2:#3d0a1c;--shadow:0 10px 28px rgba(0,0,0,.5)}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 Outfit,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
-.hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(160deg,var(--hero1),var(--hero2));padding:30px 16px 54px;border-radius:0 0 28px 28px}
-.hero svg.pitch{position:absolute;inset:0;width:100%;height:100%;opacity:.16}
-.hero .in{position:relative;max-width:720px;margin:0 auto}
-.kick{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent2);font-weight:600}
-.ball{width:22px;height:22px;animation:roll 6s linear infinite}
-@keyframes roll{to{transform:rotate(360deg)}}
-h1{font:400 clamp(44px,13vw,72px)/.92 'Bebas Neue',Impact,sans-serif;letter-spacing:.02em;margin:8px 0 6px}
-h1 span{color:var(--accent2)}
-.sub{color:#cfe6d9;font-size:13.5px;margin:0}
-.wrap{max-width:720px;margin:-30px auto 0;padding:0 16px;position:relative}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin:0 0 16px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.serif{font-family:'Playfair Display',Georgia,serif}
+.hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(120% 90% at 70% 35%,var(--hero1),var(--hero2));padding:26px 18px 70px;border-radius:0 0 34px 34px;min-height:330px}
+.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 30%,rgba(255,255,255,.22),transparent 45%);pointer-events:none}
+.hero .in{position:relative;z-index:2;max-width:720px;margin:0 auto}
+.nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:26px}
+.chip{font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);color:#fff;backdrop-filter:blur(4px)}
+.chip.on{background:#fff;color:#b0123f}
+.copy{max-width:62%}
+h1{font:800 clamp(34px,10vw,56px)/1.02 'Playfair Display',Georgia,serif;margin:0 0 10px;letter-spacing:-.01em}
+h1 em{font-weight:600;color:var(--gold)}
+.tag{font-size:14px;color:#ffe3ec;margin:0 0 14px;max-width:26ch}
+.sub{color:#ffd3df;font-size:12px;margin:0}
+.star{position:absolute;right:-6px;bottom:-4px;width:min(62%,300px);z-index:1;filter:drop-shadow(0 14px 18px rgba(60,0,20,.45))}
+.player{animation:float 4s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes float{50%{transform:translateY(-6px) rotate(-1.2deg)}}
+.ball{animation:bounce 1.6s cubic-bezier(.3,0,.7,1) infinite;transform-origin:center}
+@keyframes bounce{0%,100%{transform:translate(0,0)}50%{transform:translate(8px,-14px)}}
+.spin{animation:spin 2.4s linear infinite;transform-origin:center;transform-box:fill-box}
+@keyframes spin{to{transform:rotate(360deg)}}
+.shadow{animation:sh 4s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+@keyframes sh{50%{transform:scale(.85);opacity:.25}}
+.spark{animation:tw 2.2s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.2}50%{opacity:1}}
+.wrap{max-width:720px;margin:-34px auto 0;padding:0 16px;position:relative;z-index:3}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:16px;margin:0 0 16px;box-shadow:var(--shadow);position:relative;overflow:hidden}
 .card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(var(--accent),var(--accent2))}
 .top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;padding-left:6px}
-.teams{display:flex;align-items:center;gap:10px;margin:0}
-.badge{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;color:#fff;font:400 15px 'Bebas Neue',sans-serif;letter-spacing:0;overflow:hidden;flex:none;box-shadow:inset 0 0 0 2px rgba(255,255,255,.35)}
-.vs{font:400 14px 'Bebas Neue',sans-serif;color:var(--mute);letter-spacing:.1em}
-.match{font-weight:700;font-size:16.5px;margin:10px 0 0;line-height:1.25}
+.teams{display:flex;align-items:center;gap:8px}
+.badge{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:#fff;font:800 12px Outfit,sans-serif;letter-spacing:.02em;flex:none;box-shadow:inset 0 0 0 2px rgba(255,255,255,.4)}
+.vs{font:italic 600 13px 'Playfair Display',serif;color:var(--mute)}
+.match{font:700 17px/1.25 'Playfair Display',serif;margin:10px 0 0}
 .meta{color:var(--mute);font-size:13px;margin:2px 0 0}
-.xg{white-space:nowrap;text-align:right;background:var(--accent-bg);border-radius:12px;padding:6px 10px}
-.xg small{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
-.xg b{font:400 24px 'Bebas Neue',sans-serif;letter-spacing:.04em;color:var(--accent)}
+.xg{white-space:nowrap;text-align:right;background:var(--accent-bg);border-radius:14px;padding:7px 11px}
+.xg small{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.xg b{font:800 20px 'Playfair Display',serif;color:var(--accent)}
 .note{font-size:12.5px;color:var(--mute);margin:10px 0 10px 6px}
 .row{border-top:1px dashed var(--line);padding:11px 0 11px 6px}
 .line1{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
 .name{font-weight:600}
-.pct{font:400 24px 'Bebas Neue',sans-serif;color:var(--accent);letter-spacing:.03em}
-.bar{height:8px;background:var(--bar);border-radius:4px;margin:4px 0 8px;overflow:hidden}
+.pct{font:800 20px 'Playfair Display',serif;color:var(--accent)}
+.bar{height:8px;background:var(--bar);border-radius:4px;margin:5px 0 8px;overflow:hidden}
 .bar i{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,var(--accent),var(--accent2));animation:grow .8s ease-out both}
 @keyframes grow{from{width:0!important}}
 .line2{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:14px}
 .min{color:var(--mute)}
-input{width:110px;font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink)}
+input{width:110px;font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink)}
 input:focus{outline:2px solid var(--accent);border-color:transparent}
 .v{font-weight:700;font-size:13px;padding:3px 10px;border-radius:999px}
-.ok{color:var(--accent);background:var(--accent-bg)}.no{color:var(--bad);background:var(--bad-bg)}
-.pick{background:var(--accent-bg);border-radius:12px;padding:9px 12px;margin:6px 0 6px 6px;font-size:14px;border-left:4px solid var(--accent2)}
+.ok{color:#0a7a45;background:#dff5e9}.no{color:var(--bad);background:var(--bad-bg)}
+@media (prefers-color-scheme:dark){.ok{color:#6fe0a6;background:#12301f}}
+.pick{background:var(--accent-bg);border-radius:14px;padding:9px 12px;margin:6px 0 6px 6px;font-size:14px;border-left:4px solid var(--gold)}
 .empty,.err{text-align:center;color:var(--mute);padding:34px 14px}
-.empty svg{width:64px;height:64px;display:block;margin:0 auto 10px;opacity:.7}
+.empty svg{width:60px;height:60px;display:block;margin:0 auto 10px;color:var(--accent)}
 .foot{color:var(--mute);font-size:12.5px;margin:18px 0 34px;text-align:center}
-h2{font:400 18px 'Bebas Neue',sans-serif;margin:14px 0 0 6px;letter-spacing:.08em;color:var(--accent)}
-@media (prefers-reduced-motion:reduce){.ball,.bar i{animation:none}}
+h2{font:italic 600 17px 'Playfair Display',serif;margin:14px 0 0 6px;color:var(--accent)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
 </style>
 </head>
 <body>
 <header class="hero">
-  <svg class="pitch" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice" fill="none" stroke="#fff" stroke-width="2">
-    <rect x="10" y="10" width="380" height="180" rx="4"/><line x1="200" y1="10" x2="200" y2="190"/>
-    <circle cx="200" cy="100" r="32"/><circle cx="200" cy="100" r="3" fill="#fff"/>
-    <rect x="10" y="55" width="52" height="90"/><rect x="338" y="55" width="52" height="90"/>
-    <rect x="10" y="78" width="20" height="44"/><rect x="370" y="78" width="20" height="44"/>
-  </svg>
   <div class="in">
-    <div class="kick"><svg class="ball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#fff"/><path d="M12 6l4.5 3.3-1.7 5.3H9.2L7.5 9.3z" fill="#12201a"/><path d="M12 6V1M16.5 9.3l4.7-1.5M14.8 14.6l3 4M9.2 14.6l-3 4M7.5 9.3L2.8 7.8" stroke="#12201a" stroke-width="1.4"/></svg>Model-priced football</div>
-    <h1>Daily Match <span>Picks</span></h1>
-    <p class="sub" id="sub">Loading...</p>
+    <div class="nav"><span class="chip on">Today</span><span class="chip">Shortlist</span><span class="chip">Value check</span></div>
+    <div class="copy">
+      <h1>Daily Match <em>Picks</em></h1>
+      <p class="tag serif">Smart picks. Calm stakes. Play the numbers, not the noise.</p>
+      <p class="sub" id="sub">Loading...</p>
+    </div>
   </div>
+  <svg class="star" viewBox="0 0 220 270" aria-hidden="true">
+    <defs>
+      <linearGradient id="jer" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#ffd3df"/></linearGradient>
+      <radialGradient id="glow"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+    </defs>
+    <circle cx="120" cy="120" r="110" fill="url(#glow)"/>
+    <ellipse class="shadow" cx="100" cy="258" rx="58" ry="8" fill="#2b0610" opacity=".4"/>
+    <g class="spark" fill="#f2c57c"><path d="M30 40l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/><path d="M200 70l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" style="animation-delay:.8s"/></g>
+    <g class="player" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M92 150L84 198L80 244" stroke="#3b1a22" stroke-width="15"/>
+      <path d="M80 240L66 248" stroke="#111" stroke-width="12"/>
+      <path d="M82 212L80 240" stroke="#fff" stroke-width="16" opacity=".95"/>
+      <path d="M104 150L138 178L172 160" stroke="#3b1a22" stroke-width="15"/>
+      <path d="M150 170L172 160" stroke="#fff" stroke-width="16" opacity=".95"/>
+      <path d="M172 160L184 154" stroke="#111" stroke-width="12"/>
+      <path d="M96 128L98 154" stroke="#16161b" stroke-width="30"/>
+      <path d="M108 66L98 128" stroke="url(#jer)" stroke-width="32"/>
+      <path d="M103 78L99 108" stroke="#d81e4f" stroke-width="7" opacity=".9"/>
+      <path d="M106 74L68 96L50 124" stroke="#3b1a22" stroke-width="11"/>
+      <path d="M112 74L146 84L160 108" stroke="#3b1a22" stroke-width="11"/>
+      <path d="M106 74L84 86" stroke="url(#jer)" stroke-width="14"/>
+      <path d="M112 74L132 80" stroke="url(#jer)" stroke-width="14"/>
+      <circle cx="116" cy="44" r="16" fill="#3b1a22" stroke="none"/>
+      <path d="M101 40q5-18 24-14q10 4 7 14q-12-8-31 0z" fill="#111" stroke="none"/>
+    </g>
+    <g class="ball"><circle class="spin" cx="196" cy="140" r="14" fill="#fff"/><path class="spin" d="M196 133l6 4-2 7h-8l-2-7z" fill="#16161b"/></g>
+  </svg>
 </header>
 <div class="wrap">
   <div id="out"></div>
@@ -77,7 +116,7 @@ h2{font:400 18px 'Bebas Neue',sans-serif;margin:14px 0 0 6px;letter-spacing:.08e
   var out=document.getElementById('out'), sub=document.getElementById('sub');
   function el(tag,cls,text){var e=document.createElement(tag); if(cls)e.className=cls; if(text!=null)e.textContent=text; return e;}
   function fmt(iso){try{return new Date(iso).toLocaleString('en-GB',{weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit',timeZone:'Africa/Accra'});}catch(e){return iso||'';}}
-  var COLS=['#0b7a4b','#1d4ed8','#b45309','#9d174d','#6d28d9','#0e7490','#b91c1c','#4d7c0f'];
+  var COLS=['#d81e4f','#1b1b1f','#8a1538','#c8923a','#5b2a86','#2b2f3a','#e0457b','#7a1230'];
   function badge(n){var t=(n||'?').replace(/ (FC|CF|AFC|SC|AC)$/,'').replace(/^(FC|AC|AS|SS|US) /,'').trim(),h=0,i;for(i=0;i<t.length;i++)h=(h*31+t.charCodeAt(i))%997;var b=el('span','badge',t.slice(0,3).toUpperCase());b.style.background=COLS[h%COLS.length];return b;}
   function pct(x){return Math.round(x*100)+'%';}
   function shortRow(s){
