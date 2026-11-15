@@ -1,0 +1,7 @@
+{
+ "generated": "2026-11-15T19:58:08Z",
+ "source": "football-data.org (free tier)",
+ "api_calls": 1,
+ "matches": [],
+ "note": "Injuries and Sportybet prices are not on the free tier: add them in data/manual.json. 'min_odds' is the lowest price at which a shortlisted market is worth taking."
+}
