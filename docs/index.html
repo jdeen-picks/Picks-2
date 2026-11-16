@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Daily Match Picks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fdf3f6;--card:#fff;--ink:#2a0d16;--mute:#7a5a65;--line:#f1dce3;--accent:#d81e4f;--accent2:#ff7aa2;--gold:#f2c57c;--accent-bg:#fde7ee;--bad:#9b1c1c;--bad-bg:#fbe9e7;--bar:#f7d5df;--hero1:#f0386a;--hero2:#7d1034;--shadow:0 10px 28px rgba(160,20,70,.14)}
+@media (prefers-color-scheme:dark){:root{--bg:#14070b;--card:#1f0d13;--ink:#fbeaf0;--mute:#c9a0ae;--line:#3a1823;--accent:#ff5c88;--accent2:#ff9ab8;--gold:#f2c57c;--accent-bg:#3a1623;--bad:#ff8a80;--bad-bg:#3a1a18;--bar:#41202c;--hero1:#c01f4f;--hero2:#3d0a1c;--shadow:0 10px 28px rgba(0,0,0,.5)}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 Outfit,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.serif{font-family:'Playfair Display',Georgia,serif}
+.hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(120% 90% at 70% 35%,var(--hero1),var(--hero2));padding:26px 18px 64px;border-radius:0 0 34px 34px}
+.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 30%,rgba(255,255,255,.22),transparent 45%);pointer-events:none}
+.hero .in{position:relative;z-index:2;max-width:720px;margin:0 auto}
+.nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:26px}
+.chip{font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);color:#fff;backdrop-filter:blur(4px)}
+.chip.on{background:#fff;color:#b0123f}
+.copy{max-width:100%}
+h1{font:800 clamp(34px,10vw,56px)/1.02 'Playfair Display',Georgia,serif;margin:0 0 10px;letter-spacing:-.01em}
+h1 em{font-weight:600;color:var(--gold)}
+.tag{font-size:14px;color:#ffe3ec;margin:0 0 14px;max-width:26ch}
+.sub{color:#ffd3df;font-size:12px;margin:0}
+.star{position:absolute;right:-6px;bottom:-4px;width:min(62%,300px);z-index:1;filter:drop-shadow(0 14px 18px rgba(60,0,20,.45))}
+.player{animation:float 4s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes float{50%{transform:translateY(-6px) rotate(-1.2deg)}}
+.ball{animation:bounce 1.6s cubic-bezier(.3,0,.7,1) infinite;transform-origin:center}
+@keyframes bounce{0%,100%{transform:translate(0,0)}50%{transform:translate(8px,-14px)}}
+.spin{animation:spin 2.4s linear infinite;transform-origin:center;transform-box:fill-box}
+@keyframes spin{to{transform:rotate(360deg)}}
+.shadow{animation:sh 4s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+@keyframes sh{50%{transform:scale(.85);opacity:.25}}
+.spark{animation:tw 2.2s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.2}50%{opacity:1}}
+.wrap{max-width:720px;margin:-34px auto 0;padding:0 16px;position:relative;z-index:3}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:16px;margin:0 0 16px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(var(--accent),var(--accent2))}
+.top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;padding-left:6px}
+.teams{display:flex;align-items:center;gap:8px}
+.badge{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:#fff;font:800 12px Outfit,sans-serif;letter-spacing:.02em;flex:none;box-shadow:inset 0 0 0 2px rgba(255,255,255,.4)}
+.vs{font:italic 600 13px 'Playfair Display',serif;color:var(--mute)}
+.match{font:700 17px/1.25 'Playfair Display',serif;margin:10px 0 0}
+.meta{color:var(--mute);font-size:13px;margin:2px 0 0}
+.xg{white-space:nowrap;text-align:right;background:var(--accent-bg);border-radius:14px;padding:7px 11px}
+.xg small{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.xg b{font:800 20px 'Playfair Display',serif;color:var(--accent)}
+.note{font-size:12.5px;color:var(--mute);margin:10px 0 10px 6px}
+.row{border-top:1px dashed var(--line);padding:11px 0 11px 6px}
+.line1{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.name{font-weight:600}
+.pct{font:800 20px 'Playfair Display',serif;color:var(--accent)}
+.bar{height:8px;background:var(--bar);border-radius:4px;margin:5px 0 8px;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,var(--accent),var(--accent2));animation:grow .8s ease-out both}
+@keyframes grow{from{width:0!important}}
+.line2{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:14px}
+.min{color:var(--mute)}
+input{width:110px;font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink)}
+input:focus{outline:2px solid var(--accent);border-color:transparent}
+.v{font-weight:700;font-size:13px;padding:3px 10px;border-radius:999px}
+.ok{color:#0a7a45;background:#dff5e9}.no{color:var(--bad);background:var(--bad-bg)}
+@media (prefers-color-scheme:dark){.ok{color:#6fe0a6;background:#12301f}}
+.pick{background:var(--accent-bg);border-radius:14px;padding:9px 12px;margin:6px 0 6px 6px;font-size:14px;border-left:4px solid var(--gold)}
+.empty,.err{text-align:center;color:var(--mute);padding:34px 14px}
+.empty svg{width:60px;height:60px;display:block;margin:0 auto 10px;color:var(--accent)}
+.foot{color:var(--mute);font-size:12.5px;margin:18px 0 34px;text-align:center}
+h2{font:italic 600 17px 'Playfair Display',serif;margin:14px 0 0 6px;color:var(--accent)}
+#slip{background:linear-gradient(135deg,var(--hero1),var(--hero2));color:#fff;border-radius:22px;padding:16px;margin:0 0 16px;box-shadow:var(--shadow)}
+#slip h3{font:800 20px 'Playfair Display',serif;margin:0 0 2px}
+#slip .win{font-size:12px;color:#ffd3df;margin:0 0 10px}
+#slip .leg{display:flex;justify-content:space-between;gap:8px;background:rgba(255,255,255,.14);border-radius:12px;padding:8px 10px;margin:6px 0;font-size:14px}
+#slip .tot{display:flex;justify-content:space-between;align-items:baseline;margin-top:10px;font-size:13px;color:#ffe3ec}
+#slip .tot b{font:800 24px 'Playfair Display',serif;color:var(--gold)}
+#slip .hint{font-size:13px;color:#ffe3ec;margin:8px 0 0}
+#slip .leg b{white-space:nowrap}
+.news{font-size:12.5px;margin:4px 0 10px 6px;padding:8px 10px;border-radius:12px;background:var(--accent-bg)}
+.news b{color:var(--accent)}
+.news.warn{background:var(--bad-bg);color:var(--bad)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="in">
+    <div class="nav"><span class="chip on">Today</span><span class="chip">Shortlist</span><span class="chip">Value check</span></div>
+    <div class="copy">
+      <h1>Daily Match <em>Picks</em></h1>
+      <p class="tag serif">Smart picks. Calm stakes. Play the numbers, not the noise.</p>
+      <p class="sub" id="sub">Loading...</p>
+    </div>
+  </div>
+</header>
+<div class="wrap">
+  <div id="slip"></div>
+  <div id="out"></div>
+  <p class="foot">For 18+ only. These are model estimates, not guarantees, and any bet can lose. Never stake money you cannot afford to lose. Check the price on your bookmaker before betting: a market is only worth taking if the odds are at or above the minimum shown.</p>
+</div>
+<script>
+(function(){
+  var out=document.getElementById('out'), sub=document.getElementById('sub');
+  function el(tag,cls,text){var e=document.createElement(tag); if(cls)e.className=cls; if(text!=null)e.textContent=text; return e;}
+  function fmt(iso){try{return new Date(iso).toLocaleString('en-GB',{weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit',timeZone:'Africa/Accra'});}catch(e){return iso||'';}}
+  var COLS=['#d81e4f','#1b1b1f','#8a1538','#c8923a','#5b2a86','#2b2f3a','#e0457b','#7a1230'];
+  function badge(n){var t=(n||'?').replace(/ (FC|CF|AFC|SC|AC)$/,'').replace(/^(FC|AC|AS|SS|US) /,'').trim(),h=0,i;for(i=0;i<t.length;i++)h=(h*31+t.charCodeAt(i))%997;var b=el('span','badge',t.slice(0,3).toUpperCase());b.style.background=COLS[h%COLS.length];return b;}
+  function pct(x){return Math.round(x*100)+'%';}
+  var rows=[], saved={};
+  try{saved=JSON.parse(localStorage.getItem('odds')||'{}');}catch(e){}
+  function store(){try{localStorage.setItem('odds',JSON.stringify(saved));}catch(e){}}
+  function windowName(){var d=new Date(new Date().toLocaleString('en-US',{timeZone:'Africa/Accra'})).getDay();return (d>=3&&d<=6)?'Wednesday to Saturday':'Sunday to Tuesday';}
+  function slipBuild(){
+    var box=document.getElementById('slip');box.textContent='';
+    box.appendChild(el('h3',null,'Your 2.0 slip'));
+    box.appendChild(el('p','win','Window: '+windowName()+' · one slip of about 2.0 odds · stake 10 to 15 cedis'));
+    var c=rows.filter(function(r){return r.odds>=r.min;}),best=null,i,j,k;
+    function tryit(legs){var o=1,p=1,ms={},ok=true;legs.forEach(function(l){o*=l.odds;p*=l.chance;if(ms[l.match])ok=false;ms[l.match]=1;});
+      if(!ok||o<1.9||o>2.3)return;if(!best||p>best.p+1e-9||(Math.abs(p-best.p)<1e-9&&legs.length<best.legs.length))best={legs:legs,o:o,p:p};}
+    for(i=0;i<c.length;i++){tryit([c[i]]);for(j=i+1;j<c.length;j++){tryit([c[i],c[j]]);for(k=j+1;k<c.length;k++)tryit([c[i],c[j],c[k]]);}}
+    if(!best){box.appendChild(el('p','hint',c.length?'No mix of your entered prices lands between 1.90 and 2.30 yet. Enter more prices from your bookmaker. If nothing fits this window, skip it.':'Type your bookmaker odds under the markets below. The best slip of about 2.0 odds appears here.'));return;}
+    best.legs.forEach(function(l){var d=el('div','leg');d.appendChild(el('span',null,l.match+' · '+l.name));d.appendChild(el('b',null,'@ '+l.odds.toFixed(2)));box.appendChild(d);});
+    var t=el('div','tot');t.appendChild(el('span',null,'Model chance all legs win about '+pct(best.p)));t.appendChild(el('b',null,best.o.toFixed(2)));box.appendChild(t);
+    if(best.legs.some(function(l){return l.auto;}))box.appendChild(el('p','hint','Some prices are reference averages from other bookmakers, not Sportybet. Confirm each one on Sportybet. If a price is lower, the slip may no longer reach 2.0.'));
+    box.appendChild(el('p','hint','A 10 cedi stake would return about '+(10*best.o).toFixed(0)+' cedis. Model estimate only: the slip can still lose.'));
+  }
+  function who(list){
+    var k=(list||[]).filter(function(a){return a.key;}),o=(list||[]).length-k.length;
+    if(!k.length&&!o)return 'no absences reported';
+    var t=k.map(function(a){return a.name+' ('+a.status+(a.chance!=null?' '+Math.round(a.chance*100)+'%':'')+')';}).join(', ');
+    return (t||'no key players')+(o?(t?' + ':' · ')+o+' squad player'+(o>1?'s':''):'');
+  }
+  function newsBlock(m){
+    var n=m.news,b;
+    if(n&&n.checked){b=el('div','news');var h=el('b',null,'Team news ');b.appendChild(h);
+      b.appendChild(document.createTextNode('(updated this morning, '+n.source+'). Home: '+who(n.home)+'. Away: '+who(n.away)+'. Lineups come about an hour before kickoff, so check them.'));return b;}
+    b=el('div','news warn','Team news not available for this game. Check injuries yourself before betting.');
+    if(m.injuries_entered)b.textContent='Injuries entered by hand for this game. Check lineups before betting.';
+    return b;
+  }
+  function shortRow(s,mname){
+    var r=el('div','row'), l1=el('div','line1');
+    l1.appendChild(el('span','name',s.name||s.market)); l1.appendChild(el('span','pct',pct(s.chance)));
+    var bar=el('div','bar'), i=el('i'); i.style.width=Math.min(100,Math.round(s.chance*100))+'%'; bar.appendChild(i);
+    var l2=el('div','line2'); l2.appendChild(el('span','min','Take only if odds are at least '+Number(s.min_odds).toFixed(2)));
+    var inp=el('input'); inp.type='number'; inp.step='0.01'; inp.min='1'; inp.inputMode='decimal'; inp.placeholder='Your odds';
+    var v=el('span'), sk=mname+'|'+s.market+'|'+s.outcome, reg={match:mname,name:s.name,chance:s.chance,min:s.min_odds,odds:0,auto:false};rows.push(reg);
+    var tag=null;
+    function upd(){
+      var x=parseFloat(inp.value);reg.odds=x>0?x:0;reg.auto=false;if(tag)tag.textContent='';
+      if(!(x>0)){v.className='';v.textContent='';delete saved[sk];}
+      else{if(x>=s.min_odds){v.className='v ok';v.textContent='Worth it';}else{v.className='v no';v.textContent='Skip: too low';}saved[sk]=inp.value;}
+      store();slipBuild();
+    }
+    inp.addEventListener('input',upd);
+    if(saved[sk]){inp.value=saved[sk];var x0=parseFloat(saved[sk]);reg.odds=x0>0?x0:0;if(x0>0){if(x0>=s.min_odds){v.className='v ok';v.textContent='Worth it';}else{v.className='v no';v.textContent='Skip: too low';}}}
+    if(!saved[sk]&&s.ref_odds>0){inp.value=Number(s.ref_odds).toFixed(2);reg.odds=s.ref_odds;reg.auto=true;
+      if(s.ref_odds>=s.min_odds){v.className='v ok';v.textContent='Worth it';}else{v.className='v no';v.textContent='Skip: too low';}
+      tag=el('span','min','reference price, confirm on Sportybet');}
+    l2.appendChild(inp); l2.appendChild(v); if(tag)l2.appendChild(tag);
+    r.appendChild(l1); r.appendChild(bar); r.appendChild(l2); return r;
+  }
+  function render(d){
+    sub.textContent='Updated '+fmt(d.generated)+' (Ghana time)';
+    var ms=d.matches||[];
+    if(!ms.length){var em=el('div','card empty');em.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 7v5l3 2"/></svg>';em.appendChild(el('div',null,'No upcoming games to price right now. The next update runs at 07:00 Ghana time.'));out.appendChild(em);slipBuild();return;}
+    ms.forEach(function(m){
+      var c=el('div','card'), top=el('div','top'), left=el('div');
+      var tm=el('div','teams'),pr=(m.match||'').split(' v ');tm.appendChild(badge(pr[0]));tm.appendChild(el('span','vs','VS'));tm.appendChild(badge(pr[1]));left.appendChild(tm);left.appendChild(el('p','match',m.match)); left.appendChild(el('p','meta',(m.league||'')+' · '+fmt(m.kickoff)));
+      top.appendChild(left);
+      if(m.xg){var x=el('div','xg'); x.appendChild(el('small',null,'Expected goals')); x.appendChild(el('b',null,m.xg[0]+' – '+m.xg[1])); top.appendChild(x);}
+      c.appendChild(top);
+      var fg=m.form_games||[0,0];
+      c.appendChild(el('p','note','Based on the last '+fg[0]+' / '+fg[1]+' games, '+(m.h2h_games||0)+' head-to-head games.'));
+      c.appendChild(newsBlock(m));
+      if(!m.data_ok){c.appendChild(el('p','note','Not enough data to price this game.'));}
+      if(m.picks&&m.picks.length){c.appendChild(el('h2',null,'Model picks at the reference prices'));c.appendChild(el('p','note','Prices are averages from other bookmakers, not Sportybet. The model overrates favourites, so check Sportybet and the team news before staking.'));
+        m.picks.forEach(function(p){c.appendChild(el('div','pick',(p.name||(p.market+' · '+p.outcome))+' @ '+Number(p.odds).toFixed(2)+' · model chance '+pct(p.blended)));});}
+      if(m.shortlist&&m.shortlist.length){c.appendChild(el('h2',null,'Shortlist: type the price you see'));
+        m.shortlist.slice(0,10).forEach(function(s){c.appendChild(shortRow(s,m.match));});}
+      else if(m.data_ok){c.appendChild(el('p','note','No market reaches the 65% shortlist line for this game. Skip it.'));}
+      out.appendChild(c);
+    });
+    slipBuild();
+  }
+  fetch('data/fd_picks.json?t='+Date.now()).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).then(render)
+    .catch(function(e){sub.textContent='';slipBuild();out.appendChild(el('div','card err','Could not load today\'s data ('+e.message+'). Try again in a minute.'));});
+})();
+</script>
+</body>
+</html>
