@@ -64,6 +64,7 @@ def label(key, o):
     """Plain-English name for a market line, as it appears on Sportybet."""
     t = key.split(" ", 1)[1] if " " in key else key; half = "1st half " if key.startswith("1H") else ""
     if t.startswith("OU "): return f"{half}{'Over' if o == 'O' else 'Under'} {t[3:]}"
+    if t in ("AH 0", "AH 0.0"): return f"{half}Draw no bet: {'Home' if o == 'H' else 'Away'}"
     if t.startswith("AH "): return f"{half}Asian handicap {'Home' if o == 'H' else 'Away'} {('+' if (float(t[3:]) <= 0) == (o == 'A') and float(t[3:]) != 0 else '')}{(-float(t[3:]) if o == 'A' else float(t[3:])):g}"
     if t.startswith("TTH "): return f"Home team {'over' if o == 'O' else 'under'} {t[4:]}"
     if t.startswith("TTA "): return f"Away team {'over' if o == 'O' else 'under'} {t[4:]}"
@@ -166,7 +167,7 @@ def main():
             if book:
                 try: r = X.scan(lam[0], lam[1], book, S["minP"], S["minE"], S["minO"], S["gap"])
                 except Exception as ex: print("scan skipped:", ex); r = []
-                e["picks"] = [{k: (round(v, 4) if isinstance(v, float) else v) for k, v in x.items()} for x in r if x["status"] == "PICK"][:8]
+                e["picks"] = [dict({k: (round(v, 4) if isinstance(v, float) else v) for k, v in x.items()}, name=label(x["market"], x["outcome"])) for x in r if x["status"] == "PICK"][:8]
         results.append(e)
     os.makedirs(OUT, exist_ok=True)
     out = dict(generated=datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None).isoformat(timespec="seconds") + "Z",
