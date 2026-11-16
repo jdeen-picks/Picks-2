@@ -6,7 +6,7 @@ What it does: 1 call for the upcoming fixtures, 1 call per competition for the s
 Writes docs/data/fd_picks.json. Injuries and bookmaker prices are NOT on the free tier: put them in
 data/manual.json (see README_fd.md) and the runner will use them."""
 import json, os, sys, time, datetime, urllib.request, urllib.parse, urllib.error
-import model as M, extras2 as X, news as N
+import model as M, extras2 as X, news as N, odds as O
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "docs", "data")
@@ -121,6 +121,14 @@ def main():
     elif ncfg.get("fpl", True) and any(f["competition"]["code"] == "PL" for f in fixtures):
         fpl = N.fetch_fpl()
     season = today.year if today.month >= 7 else today.year - 1
+    ocfg = cfg.get("odds", {}); okey = os.environ.get("ODDS_API_KEY"); oevents = {}
+    if ocfg.get("enabled") and (okey or mock):
+        for code in sorted({f["competition"]["code"] for f in fixtures} & set(ocfg.get("leagues", {}))):
+            if mock:
+                from selftest.mock_odds import LEAGUE
+                oevents[code] = LEAGUE if code == "PL" else None
+            else:
+                oevents[code] = O.fetch_league(ocfg["leagues"][code], okey, ocfg.get("regions", "eu"), ocfg.get("markets", "h2h,totals,spreads"))
     for f in fixtures:
         comp = cfg["competitions"][f["competition"]["code"]]; key = comp["key"]; eu = comp.get("european")
         h, a = f["homeTeam"], f["awayTeam"]
@@ -148,8 +156,16 @@ def main():
                  xg=[round(x, 2) for x in lam] if lam else None, shortlist=[], picks=[])
         if lam:
             e["shortlist"] = shortlist(lam, S, cfg["list_min_chance"])
-            if man.get("book"):
-                r = X.scan(lam[0], lam[1], man["book"], S["minP"], S["minE"], S["minO"], S["gap"])
+            ev = O.find_event(oevents.get(code), h["name"], a["name"]); obook = O.event_book(ev) if ev else {}
+            e["odds_checked"] = bool(obook)
+            for r in e["shortlist"]:
+                v = obook.get(r["market"], {}).get(r["outcome"])
+                if v: r["ref_odds"], r["ref_books"] = v
+            book = man.get("book") or (O.plain(obook) if obook else None)
+            e["odds_source"] = "entered by hand" if man.get("book") else ("reference: median of European bookmakers" if obook else None)
+            if book:
+                try: r = X.scan(lam[0], lam[1], book, S["minP"], S["minE"], S["minO"], S["gap"])
+                except Exception as ex: print("scan skipped:", ex); r = []
                 e["picks"] = [{k: (round(v, 4) if isinstance(v, float) else v) for k, v in x.items()} for x in r if x["status"] == "PICK"][:8]
         results.append(e)
     os.makedirs(OUT, exist_ok=True)

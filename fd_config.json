@@ -6,18 +6,63 @@
   "h2h_limit": 5,
   "list_min_chance": 0.65,
   "competitions": {
-    "PL":  {"name": "Premier League",   "key": "England"},
-    "PD":  {"name": "La Liga",          "key": "Spain"},
-    "BL1": {"name": "Bundesliga",       "key": "Germany"},
-    "SA":  {"name": "Serie A",          "key": "Italy"},
-    "FL1": {"name": "Ligue 1",          "key": "France"},
-    "PPL": {"name": "Primeira Liga",    "key": "Portugal"},
-    "DED": {"name": "Eredivisie",       "key": "Netherlands"},
-    "CL":  {"name": "Champions League", "key": "Champions League", "european": true}
+    "PL": {
+      "name": "Premier League",
+      "key": "England"
+    },
+    "PD": {
+      "name": "La Liga",
+      "key": "Spain"
+    },
+    "BL1": {
+      "name": "Bundesliga",
+      "key": "Germany"
+    },
+    "SA": {
+      "name": "Serie A",
+      "key": "Italy"
+    },
+    "FL1": {
+      "name": "Ligue 1",
+      "key": "France"
+    },
+    "PPL": {
+      "name": "Primeira Liga",
+      "key": "Portugal"
+    },
+    "DED": {
+      "name": "Eredivisie",
+      "key": "Netherlands"
+    },
+    "CL": {
+      "name": "Champions League",
+      "key": "Champions League",
+      "european": true
+    }
   },
   "news": {
     "fpl": true,
     "apifootball_max_calls": 40,
-    "apifootball_ids": {"PD": 140, "BL1": 78, "SA": 135, "FL1": 61, "PPL": 94, "DED": 88, "CL": 2}
+    "apifootball_ids": {
+      "PD": 140,
+      "BL1": 78,
+      "SA": 135,
+      "FL1": 61,
+      "PPL": 94,
+      "DED": 88,
+      "CL": 2
+    }
+  },
+  "odds": {
+    "enabled": true,
+    "regions": "eu",
+    "markets": "h2h,totals,spreads",
+    "leagues": {
+      "PL": "soccer_epl",
+      "BL1": "soccer_germany_bundesliga",
+      "PD": "soccer_spain_la_liga",
+      "SA": "soccer_italy_serie_a",
+      "CL": "soccer_uefa_champs_league"
+    }
   }
 }
