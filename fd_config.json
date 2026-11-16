@@ -1,6 +1,6 @@
 {
   "base": "https://api.football-data.org/v4",
-  "days_ahead": 3,
+  "days_ahead": 7,
   "form_games": 8,
   "max_matches": 20,
   "h2h_limit": 5,
