@@ -1,7 +1,48 @@
 {
- "generated": "2026-11-19T08:50:17Z",
- "date": "2026-11-19",
- "matches": [],
+ "generated": "2026-11-20T08:51:29Z",
+ "date": "2026-11-20",
+ "matches": [
+  {
+   "fixture_id": 1575221,
+   "match": "Bayern M\u00fcnchen v 1. FC K\u00f6ln",
+   "league": "Bundesliga",
+   "kickoff": "2026-11-20T19:30:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1552827,
+   "match": "Estac Troyes v Le Havre",
+   "league": "Ligue 1",
+   "kickoff": "2026-11-20T19:45:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1558682,
+   "match": "Cercle Brugge v KVC Westerlo",
+   "league": "Belgian Pro League",
+   "kickoff": "2026-11-20T19:45:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1570454,
+   "match": "Athletic Club v Espanyol",
+   "league": "La Liga",
+   "kickoff": "2026-11-20T20:00:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  }
+ ],
  "slip": null,
  "record": {
   "wins": 0,
@@ -10,6 +51,6 @@
   "profit": 0.0,
   "settled": 0
  },
- "api_calls": 1,
- "requests_remaining": "99"
+ "api_calls": 21,
+ "requests_remaining": "87"
 }
