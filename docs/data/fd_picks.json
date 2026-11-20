@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-19T08:24:43Z",
+ "generated": "2026-11-20T08:20:45Z",
  "source": "football-data.org (free tier)",
  "api_calls": 28,
  "matches": [
@@ -541,7 +541,7 @@
      "chance": 0.798,
      "fair_odds": 1.25,
      "min_odds": 1.29,
-     "ref_odds": 1.17,
+     "ref_odds": 1.14,
      "ref_books": 25
     },
     {
@@ -551,7 +551,7 @@
      "chance": 0.791,
      "fair_odds": 1.26,
      "min_odds": 1.3,
-     "ref_odds": 1.1,
+     "ref_odds": 1.08,
      "ref_books": 25
     },
     {
@@ -625,11 +625,11 @@
     {
      "market": "FT AH -1.25",
      "outcome": "A",
-     "odds": 2.02,
-     "model": 0.5782,
+     "odds": 2.09,
+     "model": 0.5763,
      "fair": null,
-     "blended": 0.5782,
-     "edge": 0.1679,
+     "blended": 0.5763,
+     "edge": 0.2045,
      "gap": 0.0,
      "status": "PICK",
      "note": "model only",
@@ -638,12 +638,12 @@
     {
      "market": "FT AH -1.5",
      "outcome": "A",
-     "odds": 1.76,
+     "odds": 1.81,
      "model": 0.6344,
-     "fair": 0.5429,
-     "blended": 0.5978,
-     "edge": 0.0521,
-     "gap": 0.0916,
+     "fair": 0.5311,
+     "blended": 0.5931,
+     "edge": 0.0735,
+     "gap": 0.1033,
      "status": "PICK",
      "note": "",
      "name": "Asian handicap Away +1.5"
@@ -734,7 +734,7 @@
      "chance": 0.702,
      "fair_odds": 1.42,
      "min_odds": 1.47,
-     "ref_odds": 1.33,
+     "ref_odds": 1.34,
      "ref_books": 20
     },
     {
@@ -760,7 +760,7 @@
      "chance": 0.65,
      "fair_odds": 1.54,
      "min_odds": 1.58,
-     "ref_odds": 1.31,
+     "ref_odds": 1.32,
      "ref_books": 20
     },
     {
@@ -802,11 +802,11 @@
     {
      "market": "FT AH -1",
      "outcome": "A",
-     "odds": 1.33,
-     "model": 0.8085,
+     "odds": 1.34,
+     "model": 0.8073,
      "fair": null,
-     "blended": 0.8085,
-     "edge": 0.0752,
+     "blended": 0.8073,
+     "edge": 0.0817,
      "gap": 0.0,
      "status": "PICK",
      "note": "model only",
@@ -830,10 +830,10 @@
      "outcome": "A",
      "odds": 1.67,
      "model": 0.6475,
-     "fair": 0.5707,
-     "blended": 0.6168,
-     "edge": 0.0301,
-     "gap": 0.0769,
+     "fair": 0.5729,
+     "blended": 0.6177,
+     "edge": 0.0315,
+     "gap": 0.0747,
      "status": "PICK",
      "note": "",
      "name": "Asian handicap Away +0.5"
@@ -1146,11 +1146,11 @@
     {
      "market": "FT AH -1.25",
      "outcome": "H",
-     "odds": 1.85,
-     "model": 0.6223,
+     "odds": 1.88,
+     "model": 0.6214,
      "fair": null,
-     "blended": 0.6223,
-     "edge": 0.1513,
+     "blended": 0.6214,
+     "edge": 0.1682,
      "gap": 0.0,
      "status": "PICK",
      "note": "model only",
@@ -1159,15 +1159,335 @@
     {
      "market": "FT OU 3",
      "outcome": "O",
-     "odds": 2.0,
-     "model": 0.5598,
+     "odds": 1.98,
+     "model": 0.5609,
      "fair": null,
-     "blended": 0.5598,
-     "edge": 0.1197,
+     "blended": 0.5609,
+     "edge": 0.1106,
      "gap": 0.0,
      "status": "PICK",
      "note": "model only",
      "name": "Over 3"
+    }
+   ],
+   "odds_checked": true,
+   "odds_source": "reference: median of European bookmakers"
+  },
+  {
+   "match": "Eintracht Frankfurt v TSG 1899 Hoffenheim",
+   "league": "Bundesliga",
+   "kickoff": "2026-11-21T14:30:00Z",
+   "form_games": [
+    8,
+    8
+   ],
+   "h2h_games": 5,
+   "injuries_entered": false,
+   "data_ok": true,
+   "news": {
+    "checked": false
+   },
+   "xg": [
+    2.29,
+    2.09
+   ],
+   "shortlist": [
+    {
+     "name": "Over 1.5",
+     "market": "FT OU 1.5",
+     "outcome": "O",
+     "chance": 0.932,
+     "fair_odds": 1.07,
+     "min_odds": 1.15
+    },
+    {
+     "name": "Home team over 0.5",
+     "market": "FT TTH 0.5",
+     "outcome": "O",
+     "chance": 0.898,
+     "fair_odds": 1.11,
+     "min_odds": 1.15
+    },
+    {
+     "name": "Away team over 0.5",
+     "market": "FT TTA 0.5",
+     "outcome": "O",
+     "chance": 0.876,
+     "fair_odds": 1.14,
+     "min_odds": 1.18
+    },
+    {
+     "name": "1st half Over 0.5",
+     "market": "1H OU 0.5",
+     "outcome": "O",
+     "chance": 0.854,
+     "fair_odds": 1.17,
+     "min_odds": 1.21
+    },
+    {
+     "name": "Over 2.5",
+     "market": "FT OU 2.5",
+     "outcome": "O",
+     "chance": 0.812,
+     "fair_odds": 1.23,
+     "min_odds": 1.27,
+     "ref_odds": 1.35,
+     "ref_books": 3
+    },
+    {
+     "name": "Home or Away",
+     "market": "FT DC",
+     "outcome": "12",
+     "chance": 0.804,
+     "fair_odds": 1.24,
+     "min_odds": 1.28,
+     "ref_odds": 1.25,
+     "ref_books": 23
+    },
+    {
+     "name": "Asian handicap Home +1.5",
+     "market": "FT AH 1.5",
+     "outcome": "H",
+     "chance": 0.799,
+     "fair_odds": 1.25,
+     "min_odds": 1.29
+    },
+    {
+     "name": "Both teams to score: Yes",
+     "market": "FT BTTS",
+     "outcome": "Y",
+     "chance": 0.787,
+     "fair_odds": 1.27,
+     "min_odds": 1.31
+    },
+    {
+     "name": "Double chance 12 & Over 1.5",
+     "market": "FT DC&T1.5",
+     "outcome": "12&O",
+     "chance": 0.749,
+     "fair_odds": 1.34,
+     "min_odds": 1.38
+    },
+    {
+     "name": "Asian handicap Away +1.5",
+     "market": "FT AH -1.5",
+     "outcome": "A",
+     "chance": 0.742,
+     "fair_odds": 1.35,
+     "min_odds": 1.39
+    },
+    {
+     "name": "Double chance 12 & Over 2.5",
+     "market": "FT DC&T2.5",
+     "outcome": "12&O",
+     "chance": 0.688,
+     "fair_odds": 1.45,
+     "min_odds": 1.5
+    },
+    {
+     "name": "Home team over 1.5",
+     "market": "FT TTH 1.5",
+     "outcome": "O",
+     "chance": 0.666,
+     "fair_odds": 1.5,
+     "min_odds": 1.55
+    }
+   ],
+   "picks": [
+    {
+     "market": "FT OU 3.5",
+     "outcome": "O",
+     "odds": 1.89,
+     "model": 0.6365,
+     "fair": 0.5013,
+     "blended": 0.5824,
+     "edge": 0.1008,
+     "gap": 0.1352,
+     "status": "PICK",
+     "note": "",
+     "name": "Over 3.5"
+    },
+    {
+     "market": "FT OU 2.5",
+     "outcome": "O",
+     "odds": 1.35,
+     "model": 0.8121,
+     "fair": 0.7033,
+     "blended": 0.7686,
+     "edge": 0.0376,
+     "gap": 0.1088,
+     "status": "PICK",
+     "note": "",
+     "name": "Over 2.5"
+    }
+   ],
+   "odds_checked": true,
+   "odds_source": "reference: median of European bookmakers"
+  },
+  {
+   "match": "Bayer 04 Leverkusen v SC Paderborn 07",
+   "league": "Bundesliga",
+   "kickoff": "2026-11-21T14:30:00Z",
+   "form_games": [
+    8,
+    8
+   ],
+   "h2h_games": 1,
+   "injuries_entered": false,
+   "data_ok": true,
+   "news": {
+    "checked": false
+   },
+   "xg": [
+    2.46,
+    1.27
+   ],
+   "shortlist": [
+    {
+     "name": "Asian handicap Home +1.5",
+     "market": "FT AH 1.5",
+     "outcome": "H",
+     "chance": 0.928,
+     "fair_odds": 1.08,
+     "min_odds": 1.15
+    },
+    {
+     "name": "Home team over 0.5",
+     "market": "FT TTH 0.5",
+     "outcome": "O",
+     "chance": 0.914,
+     "fair_odds": 1.09,
+     "min_odds": 1.15
+    },
+    {
+     "name": "Over 1.5",
+     "market": "FT OU 1.5",
+     "outcome": "O",
+     "chance": 0.886,
+     "fair_odds": 1.13,
+     "min_odds": 1.16
+    },
+    {
+     "name": "Home or Away",
+     "market": "FT DC",
+     "outcome": "12",
+     "chance": 0.818,
+     "fair_odds": 1.22,
+     "min_odds": 1.26,
+     "ref_odds": 1.11,
+     "ref_books": 23
+    },
+    {
+     "name": "Home or Draw",
+     "market": "FT DC",
+     "outcome": "1X",
+     "chance": 0.817,
+     "fair_odds": 1.22,
+     "min_odds": 1.26,
+     "ref_odds": 1.05,
+     "ref_books": 23
+    },
+    {
+     "name": "Asian handicap Home +0.5",
+     "market": "FT AH 0.5",
+     "outcome": "H",
+     "chance": 0.817,
+     "fair_odds": 1.22,
+     "min_odds": 1.26
+    },
+    {
+     "name": "1st half Over 0.5",
+     "market": "1H OU 0.5",
+     "outcome": "O",
+     "chance": 0.806,
+     "fair_odds": 1.24,
+     "min_odds": 1.28
+    },
+    {
+     "name": "Double chance 1X & Over 1.5",
+     "market": "FT DC&T1.5",
+     "outcome": "1X&O",
+     "chance": 0.734,
+     "fair_odds": 1.36,
+     "min_odds": 1.4
+    },
+    {
+     "name": "Double chance 12 & Over 1.5",
+     "market": "FT DC&T1.5",
+     "outcome": "12&O",
+     "chance": 0.728,
+     "fair_odds": 1.37,
+     "min_odds": 1.42
+    },
+    {
+     "name": "Over 2.5",
+     "market": "FT OU 2.5",
+     "outcome": "O",
+     "chance": 0.719,
+     "fair_odds": 1.39,
+     "min_odds": 1.43,
+     "ref_odds": 1.35,
+     "ref_books": 3
+    },
+    {
+     "name": "Away team over 0.5",
+     "market": "FT TTA 0.5",
+     "outcome": "O",
+     "chance": 0.719,
+     "fair_odds": 1.39,
+     "min_odds": 1.43
+    },
+    {
+     "name": "Home team over 1.5",
+     "market": "FT TTH 1.5",
+     "outcome": "O",
+     "chance": 0.704,
+     "fair_odds": 1.42,
+     "min_odds": 1.46
+    },
+    {
+     "name": "Under 4.5",
+     "market": "FT OU 4.5",
+     "outcome": "U",
+     "chance": 0.682,
+     "fair_odds": 1.47,
+     "min_odds": 1.51
+    },
+    {
+     "name": "Both teams to score: Yes",
+     "market": "FT BTTS",
+     "outcome": "Y",
+     "chance": 0.657,
+     "fair_odds": 1.52,
+     "min_odds": 1.57
+    }
+   ],
+   "picks": [
+    {
+     "market": "FT AH -1.75",
+     "outcome": "A",
+     "odds": 1.94,
+     "model": 0.6267,
+     "fair": null,
+     "blended": 0.6267,
+     "edge": 0.2157,
+     "gap": 0.0,
+     "status": "PICK",
+     "note": "model only",
+     "name": "Asian handicap Away +1.75"
+    },
+    {
+     "market": "FT AH -2",
+     "outcome": "A",
+     "odds": 1.69,
+     "model": 0.6884,
+     "fair": null,
+     "blended": 0.6884,
+     "edge": 0.1634,
+     "gap": 0.0,
+     "status": "PICK",
+     "note": "model only",
+     "name": "Asian handicap Away +2"
     }
    ],
    "odds_checked": true,
@@ -1239,7 +1559,7 @@
      "chance": 0.801,
      "fair_odds": 1.25,
      "min_odds": 1.29,
-     "ref_odds": 1.26,
+     "ref_odds": 1.27,
      "ref_books": 23
     },
     {
@@ -1249,7 +1569,7 @@
      "chance": 0.782,
      "fair_odds": 1.28,
      "min_odds": 1.32,
-     "ref_odds": 1.54,
+     "ref_odds": 1.55,
      "ref_books": 8
     },
     {
@@ -1283,7 +1603,7 @@
      "chance": 0.686,
      "fair_odds": 1.46,
      "min_odds": 1.5,
-     "ref_odds": 1.31,
+     "ref_odds": 1.3,
      "ref_books": 23
     },
     {
@@ -1609,7 +1929,7 @@
      "chance": 0.69,
      "fair_odds": 1.45,
      "min_odds": 1.49,
-     "ref_odds": 1.53,
+     "ref_odds": 1.5,
      "ref_books": 23
     },
     {
@@ -1633,11 +1953,11 @@
     {
      "market": "FT OU 3.25",
      "outcome": "O",
-     "odds": 1.9,
-     "model": 0.6627,
+     "odds": 1.88,
+     "model": 0.6632,
      "fair": null,
-     "blended": 0.6627,
-     "edge": 0.259,
+     "blended": 0.6632,
+     "edge": 0.2468,
      "gap": 0.0,
      "status": "PICK",
      "note": "model only",
@@ -1646,11 +1966,11 @@
     {
      "market": "FT OU 3",
      "outcome": "O",
-     "odds": 1.69,
-     "model": 0.7225,
+     "odds": 1.65,
+     "model": 0.7251,
      "fair": null,
-     "blended": 0.7225,
-     "edge": 0.2211,
+     "blended": 0.7251,
+     "edge": 0.1965,
      "gap": 0.0,
      "status": "PICK",
      "note": "model only",
@@ -1659,11 +1979,11 @@
     {
      "market": "FT AH 1",
      "outcome": "A",
-     "odds": 1.84,
-     "model": 0.6001,
+     "odds": 1.8,
+     "model": 0.6024,
      "fair": null,
-     "blended": 0.6001,
-     "edge": 0.1041,
+     "blended": 0.6024,
+     "edge": 0.0844,
      "gap": 0.0,
      "status": "PICK",
      "note": "model only",
@@ -1687,320 +2007,298 @@
    "odds_source": "reference: median of European bookmakers"
   },
   {
-   "match": "Eintracht Frankfurt v TSG 1899 Hoffenheim",
-   "league": "Bundesliga",
-   "kickoff": "2026-11-21T14:30:00Z",
+   "match": "Chelsea FC v Leeds United FC",
+   "league": "Premier League",
+   "kickoff": "2026-11-21T15:00:00Z",
    "form_games": [
     8,
     8
    ],
-   "h2h_games": 5,
-   "injuries_entered": false,
+   "h2h_games": 2,
+   "injuries_entered": true,
    "data_ok": true,
    "news": {
-    "checked": false
+    "checked": true,
+    "source": "Fantasy Premier League feed",
+    "home": [
+     {
+      "name": "Martinez",
+      "status": "doubtful",
+      "chance": 0.75,
+      "note": "Head injury - 75% chance of playing",
+      "key": true
+     },
+     {
+      "name": "S\u00e1nchez",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Como on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "J\u00f6rgensen",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined RC Strasbourg on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "James",
+      "status": "out",
+      "chance": null,
+      "note": "Knee injury - Unknown return date",
+      "key": false
+     },
+     {
+      "name": "Chalobah",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Como permanently",
+      "key": false
+     },
+     {
+      "name": "B.Badiashile",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Napoli on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "Hato",
+      "status": "out",
+      "chance": null,
+      "note": "Unspecified injury - Unknown return date",
+      "key": false
+     },
+     {
+      "name": "M.Sarr",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Real Sociedad on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "Acheampong",
+      "status": "doubtful",
+      "chance": 0.75,
+      "note": "Unspecified injury - 75% chance of playing",
+      "key": true
+     },
+     {
+      "name": "Gittens",
+      "status": "out",
+      "chance": null,
+      "note": "Ankle injury - Unknown return date",
+      "key": false
+     },
+     {
+      "name": "Caicedo",
+      "status": "doubtful",
+      "chance": 0.75,
+      "note": "Unspecified injury - 75% chance of playing",
+      "key": true
+     },
+     {
+      "name": "D.Essugo",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined RC Strasbourg on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "Jo\u00e3o Pedro",
+      "status": "out",
+      "chance": null,
+      "note": "Thigh injury - Unknown return date",
+      "key": true
+     },
+     {
+      "name": "Marc Guiu",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined RB Leipzig permanently",
+      "key": false
+     },
+     {
+      "name": "Lacroix",
+      "status": "out",
+      "chance": null,
+      "note": "Hamstring injury - Unknown return date",
+      "key": true
+     }
+    ],
+    "away": [
+     {
+      "name": "Perri",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Torino on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "Bornauw",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Hamburg SV on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "Gnonto",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined ACF Fiorentina on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "Harrison",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined New England Revolution permanently",
+      "key": false
+     },
+     {
+      "name": "Piroe",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined West Ham United on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "Mateo Joseph",
+      "status": "out",
+      "chance": null,
+      "note": "Knee injury - Unknown return date",
+      "key": false
+     }
+    ]
    },
    "xg": [
-    2.29,
-    2.09
+    1.31,
+    1.26
    ],
    "shortlist": [
     {
-     "name": "Over 1.5",
-     "market": "FT OU 1.5",
-     "outcome": "O",
-     "chance": 0.932,
-     "fair_odds": 1.07,
-     "min_odds": 1.15
-    },
-    {
-     "name": "Home team over 0.5",
-     "market": "FT TTH 0.5",
-     "outcome": "O",
-     "chance": 0.898,
-     "fair_odds": 1.11,
-     "min_odds": 1.15
-    },
-    {
-     "name": "Away team over 0.5",
-     "market": "FT TTA 0.5",
-     "outcome": "O",
-     "chance": 0.876,
-     "fair_odds": 1.14,
-     "min_odds": 1.18
-    },
-    {
-     "name": "1st half Over 0.5",
-     "market": "1H OU 0.5",
-     "outcome": "O",
-     "chance": 0.854,
-     "fair_odds": 1.17,
-     "min_odds": 1.21
-    },
-    {
-     "name": "Over 2.5",
-     "market": "FT OU 2.5",
-     "outcome": "O",
-     "chance": 0.812,
-     "fair_odds": 1.23,
-     "min_odds": 1.27,
-     "ref_odds": 1.35,
-     "ref_books": 3
-    },
-    {
-     "name": "Home or Away",
-     "market": "FT DC",
-     "outcome": "12",
-     "chance": 0.804,
-     "fair_odds": 1.24,
-     "min_odds": 1.28,
-     "ref_odds": 1.25,
-     "ref_books": 23
+     "name": "Under 4.5",
+     "market": "FT OU 4.5",
+     "outcome": "U",
+     "chance": 0.882,
+     "fair_odds": 1.13,
+     "min_odds": 1.17
     },
     {
      "name": "Asian handicap Home +1.5",
      "market": "FT AH 1.5",
      "outcome": "H",
-     "chance": 0.799,
-     "fair_odds": 1.25,
-     "min_odds": 1.29
-    },
-    {
-     "name": "Both teams to score: Yes",
-     "market": "FT BTTS",
-     "outcome": "Y",
-     "chance": 0.787,
-     "fair_odds": 1.27,
-     "min_odds": 1.31
-    },
-    {
-     "name": "Double chance 12 & Over 1.5",
-     "market": "FT DC&T1.5",
-     "outcome": "12&O",
-     "chance": 0.749,
-     "fair_odds": 1.34,
-     "min_odds": 1.38
+     "chance": 0.846,
+     "fair_odds": 1.18,
+     "min_odds": 1.22
     },
     {
      "name": "Asian handicap Away +1.5",
      "market": "FT AH -1.5",
      "outcome": "A",
-     "chance": 0.742,
+     "chance": 0.83,
+     "fair_odds": 1.21,
+     "min_odds": 1.24
+    },
+    {
+     "name": "Under 3.5",
+     "market": "FT OU 3.5",
+     "outcome": "U",
+     "chance": 0.743,
      "fair_odds": 1.35,
      "min_odds": 1.39
-    },
-    {
-     "name": "Double chance 12 & Over 2.5",
-     "market": "FT DC&T2.5",
-     "outcome": "12&O",
-     "chance": 0.688,
-     "fair_odds": 1.45,
-     "min_odds": 1.5
-    },
-    {
-     "name": "Home team over 1.5",
-     "market": "FT TTH 1.5",
-     "outcome": "O",
-     "chance": 0.666,
-     "fair_odds": 1.5,
-     "min_odds": 1.55
-    }
-   ],
-   "picks": [
-    {
-     "market": "FT OU 3.5",
-     "outcome": "O",
-     "odds": 1.89,
-     "model": 0.6365,
-     "fair": 0.5013,
-     "blended": 0.5824,
-     "edge": 0.1008,
-     "gap": 0.1352,
-     "status": "PICK",
-     "note": "",
-     "name": "Over 3.5"
-    },
-    {
-     "market": "FT OU 2.5",
-     "outcome": "O",
-     "odds": 1.35,
-     "model": 0.8121,
-     "fair": 0.7033,
-     "blended": 0.7686,
-     "edge": 0.0376,
-     "gap": 0.1088,
-     "status": "PICK",
-     "note": "",
-     "name": "Over 2.5"
-    }
-   ],
-   "odds_checked": true,
-   "odds_source": "reference: median of European bookmakers"
-  },
-  {
-   "match": "Bayer 04 Leverkusen v SC Paderborn 07",
-   "league": "Bundesliga",
-   "kickoff": "2026-11-21T14:30:00Z",
-   "form_games": [
-    8,
-    8
-   ],
-   "h2h_games": 1,
-   "injuries_entered": false,
-   "data_ok": true,
-   "news": {
-    "checked": false
-   },
-   "xg": [
-    2.46,
-    1.27
-   ],
-   "shortlist": [
-    {
-     "name": "Asian handicap Home +1.5",
-     "market": "FT AH 1.5",
-     "outcome": "H",
-     "chance": 0.928,
-     "fair_odds": 1.08,
-     "min_odds": 1.15
-    },
-    {
-     "name": "Home team over 0.5",
-     "market": "FT TTH 0.5",
-     "outcome": "O",
-     "chance": 0.914,
-     "fair_odds": 1.09,
-     "min_odds": 1.15
-    },
-    {
-     "name": "Over 1.5",
-     "market": "FT OU 1.5",
-     "outcome": "O",
-     "chance": 0.886,
-     "fair_odds": 1.13,
-     "min_odds": 1.16
     },
     {
      "name": "Home or Away",
      "market": "FT DC",
      "outcome": "12",
-     "chance": 0.818,
-     "fair_odds": 1.22,
-     "min_odds": 1.26,
-     "ref_odds": 1.11,
-     "ref_books": 23
-    },
-    {
-     "name": "Home or Draw",
-     "market": "FT DC",
-     "outcome": "1X",
-     "chance": 0.817,
-     "fair_odds": 1.22,
-     "min_odds": 1.26,
-     "ref_odds": 1.06,
-     "ref_books": 23
-    },
-    {
-     "name": "Asian handicap Home +0.5",
-     "market": "FT AH 0.5",
-     "outcome": "H",
-     "chance": 0.817,
-     "fair_odds": 1.22,
-     "min_odds": 1.26
-    },
-    {
-     "name": "1st half Over 0.5",
-     "market": "1H OU 0.5",
-     "outcome": "O",
-     "chance": 0.806,
-     "fair_odds": 1.24,
-     "min_odds": 1.28
-    },
-    {
-     "name": "Double chance 1X & Over 1.5",
-     "market": "FT DC&T1.5",
-     "outcome": "1X&O",
      "chance": 0.734,
      "fair_odds": 1.36,
-     "min_odds": 1.4
+     "min_odds": 1.4,
+     "ref_odds": 1.27,
+     "ref_books": 25
     },
     {
-     "name": "Double chance 12 & Over 1.5",
-     "market": "FT DC&T1.5",
-     "outcome": "12&O",
-     "chance": 0.728,
-     "fair_odds": 1.37,
-     "min_odds": 1.42
-    },
-    {
-     "name": "Over 2.5",
-     "market": "FT OU 2.5",
+     "name": "Home team over 0.5",
+     "market": "FT TTH 0.5",
      "outcome": "O",
-     "chance": 0.719,
-     "fair_odds": 1.39,
-     "min_odds": 1.43,
-     "ref_odds": 1.35,
-     "ref_books": 3
+     "chance": 0.731,
+     "fair_odds": 1.37,
+     "min_odds": 1.41
+    },
+    {
+     "name": "Over 1.5",
+     "market": "FT OU 1.5",
+     "outcome": "O",
+     "chance": 0.727,
+     "fair_odds": 1.38,
+     "min_odds": 1.42
     },
     {
      "name": "Away team over 0.5",
      "market": "FT TTA 0.5",
      "outcome": "O",
-     "chance": 0.719,
-     "fair_odds": 1.39,
-     "min_odds": 1.43
+     "chance": 0.716,
+     "fair_odds": 1.4,
+     "min_odds": 1.44
     },
     {
-     "name": "Home team over 1.5",
-     "market": "FT TTH 1.5",
-     "outcome": "O",
-     "chance": 0.704,
-     "fair_odds": 1.42,
-     "min_odds": 1.46
-    },
-    {
-     "name": "Under 4.5",
-     "market": "FT OU 4.5",
+     "name": "1st half Under 1.5",
+     "market": "1H OU 1.5",
      "outcome": "U",
-     "chance": 0.682,
-     "fair_odds": 1.47,
-     "min_odds": 1.51
+     "chance": 0.688,
+     "fair_odds": 1.45,
+     "min_odds": 1.5
     },
     {
-     "name": "Both teams to score: Yes",
-     "market": "FT BTTS",
-     "outcome": "Y",
-     "chance": 0.657,
-     "fair_odds": 1.52,
-     "min_odds": 1.57
+     "name": "1st half Over 0.5",
+     "market": "1H OU 0.5",
+     "outcome": "O",
+     "chance": 0.677,
+     "fair_odds": 1.48,
+     "min_odds": 1.52
     }
    ],
    "picks": [
     {
-     "market": "FT AH -1.75",
+     "market": "FT AH -1",
      "outcome": "A",
-     "odds": 1.88,
-     "model": 0.6282,
+     "odds": 1.51,
+     "model": 0.7589,
      "fair": null,
-     "blended": 0.6282,
-     "edge": 0.181,
+     "blended": 0.7589,
+     "edge": 0.1459,
      "gap": 0.0,
      "status": "PICK",
      "note": "model only",
-     "name": "Asian handicap Away +1.75"
+     "name": "Asian handicap Away +1"
     },
     {
-     "market": "FT AH -2",
+     "market": "FT AH -0.5",
      "outcome": "A",
-     "odds": 1.69,
-     "model": 0.6884,
+     "odds": 1.94,
+     "model": 0.6201,
+     "fair": 0.4948,
+     "blended": 0.57,
+     "edge": 0.1058,
+     "gap": 0.1253,
+     "status": "PICK",
+     "note": "",
+     "name": "Asian handicap Away +0.5"
+    },
+    {
+     "market": "FT OU 2.75",
+     "outcome": "U",
+     "odds": 1.8,
+     "model": 0.5863,
      "fair": null,
-     "blended": 0.6884,
-     "edge": 0.1634,
+     "blended": 0.5863,
+     "edge": 0.0554,
      "gap": 0.0,
      "status": "PICK",
      "note": "model only",
-     "name": "Asian handicap Away +2"
+     "name": "Under 2.75"
     }
    ],
    "odds_checked": true,
@@ -2098,6 +2396,13 @@
       "status": "unavailable",
       "chance": null,
       "note": "Has joined Charlton Athletic on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "Hudson-Odoi",
+      "status": "out",
+      "chance": null,
+      "note": "Unspecified injury - Unknown return date",
       "key": false
      },
      {
@@ -2249,6 +2554,738 @@
      "status": "PICK",
      "note": "model only",
      "name": "Draw no bet: Home"
+    }
+   ],
+   "odds_checked": true,
+   "odds_source": "reference: median of European bookmakers"
+  },
+  {
+   "match": "Aston Villa FC v Sunderland AFC",
+   "league": "Premier League",
+   "kickoff": "2026-11-21T15:00:00Z",
+   "form_games": [
+    8,
+    8
+   ],
+   "h2h_games": 2,
+   "injuries_entered": true,
+   "data_ok": true,
+   "news": {
+    "checked": true,
+    "source": "Fantasy Premier League feed",
+    "home": [
+     {
+      "name": "Digne",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Paris Saint-Germain permanently",
+      "key": false
+     },
+     {
+      "name": "Cash",
+      "status": "doubtful",
+      "chance": 0.75,
+      "note": "Concussion - 75% chance of playing",
+      "key": true
+     },
+     {
+      "name": "A.Garc\u00eda",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Getafe on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "Nedeljkovic",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Rangers on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "Bailey",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Olympiakos permanently",
+      "key": false
+     },
+     {
+      "name": "Onana",
+      "status": "out",
+      "chance": null,
+      "note": "Knee injury - Unknown return date",
+      "key": false
+     },
+     {
+      "name": "Iling Jr",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Bolton Wanderers on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "Manzambi",
+      "status": "doubtful",
+      "chance": 0.75,
+      "note": "Calf injury - 75% chance of playing",
+      "key": true
+     },
+     {
+      "name": "Watkins",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Al Hilal permanently",
+      "key": false
+     },
+     {
+      "name": "Ruggeri",
+      "status": "out",
+      "chance": null,
+      "note": "Hamstring injury - Expected back 2 Jan",
+      "key": false
+     },
+     {
+      "name": "Lynch",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Oxford United on loan until January",
+      "key": false
+     },
+     {
+      "name": "Wan-Bissaka",
+      "status": "doubtful",
+      "chance": 0.5,
+      "note": "Hamstring injury - 50% chance of playing",
+      "key": false
+     }
+    ],
+    "away": [
+     {
+      "name": "Patterson",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Wrexham permanently",
+      "key": false
+     },
+     {
+      "name": "Ballard",
+      "status": "out",
+      "chance": null,
+      "note": "Hamstring injury - Unknown return date",
+      "key": true
+     },
+     {
+      "name": "Seelt",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Swansea City on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "Hjelde",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined KV Mechelen on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "Masuaku",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Konyaspor permanently",
+      "key": false
+     },
+     {
+      "name": "Diarra",
+      "status": "out",
+      "chance": null,
+      "note": "Muscular injury - Unknown return date",
+      "key": false
+     },
+     {
+      "name": "Xhaka",
+      "status": "out",
+      "chance": null,
+      "note": "Calf injury - Unknown return date",
+      "key": true
+     },
+     {
+      "name": "Adingra",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Ajax on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "Mundle",
+      "status": "out",
+      "chance": null,
+      "note": "Knee injury - Unknown return date",
+      "key": false
+     },
+     {
+      "name": "Brobbey",
+      "status": "out",
+      "chance": null,
+      "note": "Muscular injury - Unknown return date",
+      "key": true
+     }
+    ]
+   },
+   "xg": [
+    2.78,
+    0.96
+   ],
+   "shortlist": [
+    {
+     "name": "Asian handicap Home +1.5",
+     "market": "FT AH 1.5",
+     "outcome": "H",
+     "chance": 0.967,
+     "fair_odds": 1.03,
+     "min_odds": 1.15
+    },
+    {
+     "name": "Home team over 0.5",
+     "market": "FT TTH 0.5",
+     "outcome": "O",
+     "chance": 0.938,
+     "fair_odds": 1.07,
+     "min_odds": 1.15
+    },
+    {
+     "name": "Home or Draw",
+     "market": "FT DC",
+     "outcome": "1X",
+     "chance": 0.896,
+     "fair_odds": 1.12,
+     "min_odds": 1.15,
+     "ref_odds": 1.2,
+     "ref_books": 25
+    },
+    {
+     "name": "Asian handicap Home +0.5",
+     "market": "FT AH 0.5",
+     "outcome": "H",
+     "chance": 0.896,
+     "fair_odds": 1.12,
+     "min_odds": 1.15
+    },
+    {
+     "name": "Over 1.5",
+     "market": "FT OU 1.5",
+     "outcome": "O",
+     "chance": 0.887,
+     "fair_odds": 1.13,
+     "min_odds": 1.16
+    },
+    {
+     "name": "Home or Away",
+     "market": "FT DC",
+     "outcome": "12",
+     "chance": 0.855,
+     "fair_odds": 1.17,
+     "min_odds": 1.2,
+     "ref_odds": 1.26,
+     "ref_books": 25
+    },
+    {
+     "name": "1st half Over 0.5",
+     "market": "1H OU 0.5",
+     "outcome": "O",
+     "chance": 0.807,
+     "fair_odds": 1.24,
+     "min_odds": 1.28
+    },
+    {
+     "name": "Double chance 1X & Over 1.5",
+     "market": "FT DC&T1.5",
+     "outcome": "1X&O",
+     "chance": 0.806,
+     "fair_odds": 1.24,
+     "min_odds": 1.28
+    },
+    {
+     "name": "Double chance 12 & Over 1.5",
+     "market": "FT DC&T1.5",
+     "outcome": "12&O",
+     "chance": 0.766,
+     "fair_odds": 1.31,
+     "min_odds": 1.34
+    },
+    {
+     "name": "Home team over 1.5",
+     "market": "FT TTH 1.5",
+     "outcome": "O",
+     "chance": 0.765,
+     "fair_odds": 1.31,
+     "min_odds": 1.35
+    },
+    {
+     "name": "Home win",
+     "market": "FT 1X2",
+     "outcome": "H",
+     "chance": 0.752,
+     "fair_odds": 1.33,
+     "min_odds": 1.37,
+     "ref_odds": 1.75,
+     "ref_books": 25
+    },
+    {
+     "name": "Asian handicap Home -0.5",
+     "market": "FT AH -0.5",
+     "outcome": "H",
+     "chance": 0.752,
+     "fair_odds": 1.33,
+     "min_odds": 1.37,
+     "ref_odds": 1.77,
+     "ref_books": 4
+    },
+    {
+     "name": "Away team under 1.5",
+     "market": "FT TTA 1.5",
+     "outcome": "U",
+     "chance": 0.75,
+     "fair_odds": 1.33,
+     "min_odds": 1.37
+    },
+    {
+     "name": "Over 2.5",
+     "market": "FT OU 2.5",
+     "outcome": "O",
+     "chance": 0.721,
+     "fair_odds": 1.39,
+     "min_odds": 1.43,
+     "ref_odds": 1.75,
+     "ref_books": 17
+    },
+    {
+     "name": "Under 4.5",
+     "market": "FT OU 4.5",
+     "outcome": "U",
+     "chance": 0.68,
+     "fair_odds": 1.47,
+     "min_odds": 1.51
+    },
+    {
+     "name": "Double chance 12 & Over 2.5",
+     "market": "FT DC&T2.5",
+     "outcome": "12&O",
+     "chance": 0.663,
+     "fair_odds": 1.51,
+     "min_odds": 1.55
+    },
+    {
+     "name": "Double chance 1X & Over 2.5",
+     "market": "FT DC&T2.5",
+     "outcome": "1X&O",
+     "chance": 0.651,
+     "fair_odds": 1.54,
+     "min_odds": 1.58
+    }
+   ],
+   "picks": [
+    {
+     "market": "FT AH -1",
+     "outcome": "H",
+     "odds": 2.37,
+     "model": 0.6339,
+     "fair": null,
+     "blended": 0.6339,
+     "edge": 0.5024,
+     "gap": 0.0,
+     "status": "PICK",
+     "note": "model only",
+     "name": "Asian handicap Home -1"
+    },
+    {
+     "market": "FT AH -0.75",
+     "outcome": "H",
+     "odds": 2.02,
+     "model": 0.7002,
+     "fair": null,
+     "blended": 0.7002,
+     "edge": 0.4145,
+     "gap": 0.0,
+     "status": "PICK",
+     "note": "model only",
+     "name": "Asian handicap Home -0.75"
+    },
+    {
+     "market": "FT OU 2.75",
+     "outcome": "O",
+     "odds": 1.99,
+     "model": 0.6692,
+     "fair": null,
+     "blended": 0.6692,
+     "edge": 0.3317,
+     "gap": 0.0,
+     "status": "PICK",
+     "note": "model only",
+     "name": "Over 2.75"
+    },
+    {
+     "market": "FT AH 0",
+     "outcome": "H",
+     "odds": 1.35,
+     "model": 0.8589,
+     "fair": null,
+     "blended": 0.8589,
+     "edge": 0.1595,
+     "gap": 0.0,
+     "status": "PICK",
+     "note": "model only",
+     "name": "Draw no bet: Home"
+    }
+   ],
+   "odds_checked": true,
+   "odds_source": "reference: median of European bookmakers"
+  },
+  {
+   "match": "Coventry City FC v Crystal Palace FC",
+   "league": "Premier League",
+   "kickoff": "2026-11-21T15:00:00Z",
+   "form_games": [
+    8,
+    8
+   ],
+   "h2h_games": 0,
+   "injuries_entered": true,
+   "data_ok": true,
+   "news": {
+    "checked": true,
+    "source": "Fantasy Premier League feed",
+    "home": [
+     {
+      "name": "Onyeka",
+      "status": "doubtful",
+      "chance": 0.75,
+      "note": "Groin injury - 75% chance of playing",
+      "key": false
+     },
+     {
+      "name": "Dovin",
+      "status": "unavailable",
+      "chance": null,
+      "note": "not included in squad.",
+      "key": false
+     },
+     {
+      "name": "Thomas",
+      "status": "doubtful",
+      "chance": 0.75,
+      "note": "Calf injury - 75% chance of playing",
+      "key": true
+     },
+     {
+      "name": "Kitching",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Sheffield United on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "Woolfenden",
+      "status": "out",
+      "chance": null,
+      "note": "Knee injury - Unknown return date",
+      "key": false
+     },
+     {
+      "name": "Brau",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Academico de Viseu on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "Amenda",
+      "status": "out",
+      "chance": null,
+      "note": "Calf injury - Unknown return date",
+      "key": false
+     },
+     {
+      "name": "Mason-Clark",
+      "status": "doubtful",
+      "chance": 0.75,
+      "note": "Knee injury - 75% chance of playing",
+      "key": false
+     },
+     {
+      "name": "Eccles",
+      "status": "out",
+      "chance": null,
+      "note": "Ankle injury - Unknown return date",
+      "key": false
+     },
+     {
+      "name": "Borges Rodrigues",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Burton Albion on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "Andrews",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Oxford United on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "Wright",
+      "status": "out",
+      "chance": null,
+      "note": "Lack of match fitness - Unknown return date",
+      "key": false
+     },
+     {
+      "name": "Markelo",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Shabab Al-Ahli Dubai permanently",
+      "key": false
+     },
+     {
+      "name": "Bassette",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined KVC Westerlo on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "Yirenkyi",
+      "status": "doubtful",
+      "chance": 0.75,
+      "note": "Unspecified injury - 75% chance of playing",
+      "key": true
+     }
+    ],
+    "away": [
+     {
+      "name": "Sosa",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined FC Cologne on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "Chadi Riad",
+      "status": "out",
+      "chance": null,
+      "note": "Knee injury - Unknown return date",
+      "key": false
+     },
+     {
+      "name": "Sarr",
+      "status": "out",
+      "chance": null,
+      "note": "Groin injury - Expected back 29 Nov",
+      "key": false
+     },
+     {
+      "name": "Devenny",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Stoke City permanently",
+      "key": false
+     },
+     {
+      "name": "Esse",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Millwall on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "M.Fran\u00e7a",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Alverca on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "J.Rak-Sakyi",
+      "status": "unavailable",
+      "chance": null,
+      "note": "has joined  Kasimpasa on loan for the rest of the seaon.",
+      "key": false
+     },
+     {
+      "name": "Cardines",
+      "status": "unavailable",
+      "chance": null,
+      "note": "Has joined Bristol City on loan for the rest of the season",
+      "key": false
+     },
+     {
+      "name": "Strand Larsen",
+      "status": "doubtful",
+      "chance": 0.75,
+      "note": "Ankle injury - 75% chance of playing",
+      "key": true
+     },
+     {
+      "name": "Mateta",
+      "status": "suspended",
+      "chance": null,
+      "note": "Suspended until 2 Dec",
+      "key": false
+     },
+     {
+      "name": "Uche",
+      "status": "unavailable",
+      "chance": null,
+      "note": "has returned to Getafe CF",
+      "key": false
+     },
+     {
+      "name": "Tomiyasu",
+      "status": "out",
+      "chance": null,
+      "note": "Calf injury - Expected back 29 Nov",
+      "key": false
+     }
+    ]
+   },
+   "xg": [
+    1.99,
+    1.36
+   ],
+   "shortlist": [
+    {
+     "name": "Asian handicap Home +1.5",
+     "market": "FT AH 1.5",
+     "outcome": "H",
+     "chance": 0.888,
+     "fair_odds": 1.13,
+     "min_odds": 1.16
+    },
+    {
+     "name": "Home team over 0.5",
+     "market": "FT TTH 0.5",
+     "outcome": "O",
+     "chance": 0.863,
+     "fair_odds": 1.16,
+     "min_odds": 1.19
+    },
+    {
+     "name": "Over 1.5",
+     "market": "FT OU 1.5",
+     "outcome": "O",
+     "chance": 0.847,
+     "fair_odds": 1.18,
+     "min_odds": 1.22
+    },
+    {
+     "name": "Home or Away",
+     "market": "FT DC",
+     "outcome": "12",
+     "chance": 0.783,
+     "fair_odds": 1.28,
+     "min_odds": 1.32,
+     "ref_odds": 1.3,
+     "ref_books": 25
+    },
+    {
+     "name": "1st half Over 0.5",
+     "market": "1H OU 0.5",
+     "outcome": "O",
+     "chance": 0.771,
+     "fair_odds": 1.3,
+     "min_odds": 1.34
+    },
+    {
+     "name": "Under 4.5",
+     "market": "FT OU 4.5",
+     "outcome": "U",
+     "chance": 0.754,
+     "fair_odds": 1.33,
+     "min_odds": 1.37
+    },
+    {
+     "name": "Away team over 0.5",
+     "market": "FT TTA 0.5",
+     "outcome": "O",
+     "chance": 0.743,
+     "fair_odds": 1.35,
+     "min_odds": 1.39
+    },
+    {
+     "name": "Home or Draw",
+     "market": "FT DC",
+     "outcome": "1X",
+     "chance": 0.739,
+     "fair_odds": 1.35,
+     "min_odds": 1.39,
+     "ref_odds": 1.44,
+     "ref_books": 25
+    },
+    {
+     "name": "Asian handicap Home +0.5",
+     "market": "FT AH 0.5",
+     "outcome": "H",
+     "chance": 0.739,
+     "fair_odds": 1.35,
+     "min_odds": 1.39
+    },
+    {
+     "name": "Asian handicap Away +1.5",
+     "market": "FT AH -1.5",
+     "outcome": "A",
+     "chance": 0.696,
+     "fair_odds": 1.44,
+     "min_odds": 1.48
+    },
+    {
+     "name": "Double chance 12 & Over 1.5",
+     "market": "FT DC&T1.5",
+     "outcome": "12&O",
+     "chance": 0.665,
+     "fair_odds": 1.5,
+     "min_odds": 1.55
+    }
+   ],
+   "picks": [
+    {
+     "market": "FT AH 0",
+     "outcome": "H",
+     "odds": 1.81,
+     "model": 0.6418,
+     "fair": null,
+     "blended": 0.6418,
+     "edge": 0.1617,
+     "gap": 0.0,
+     "status": "PICK",
+     "note": "model only",
+     "name": "Draw no bet: Home"
+    },
+    {
+     "market": "FT OU 2.75",
+     "outcome": "O",
+     "odds": 1.92,
+     "model": 0.5972,
+     "fair": null,
+     "blended": 0.5972,
+     "edge": 0.1466,
+     "gap": 0.0,
+     "status": "PICK",
+     "note": "model only",
+     "name": "Over 2.75"
+    },
+    {
+     "market": "FT OU 2.5",
+     "outcome": "O",
+     "odds": 1.7,
+     "model": 0.6499,
+     "fair": 0.5584,
+     "blended": 0.6133,
+     "edge": 0.0426,
+     "gap": 0.0914,
+     "status": "PICK",
+     "note": "",
+     "name": "Over 2.5"
     }
    ],
    "odds_checked": true,
@@ -2478,7 +3515,7 @@
      "chance": 0.766,
      "fair_odds": 1.31,
      "min_odds": 1.34,
-     "ref_odds": 1.15,
+     "ref_odds": 1.14,
      "ref_books": 25
     },
     {
@@ -2496,7 +3533,7 @@
      "chance": 0.764,
      "fair_odds": 1.31,
      "min_odds": 1.35,
-     "ref_odds": 1.22,
+     "ref_odds": 1.21,
      "ref_books": 25
     },
     {
@@ -2532,8 +3569,8 @@
      "chance": 0.688,
      "fair_odds": 1.45,
      "min_odds": 1.5,
-     "ref_odds": 1.54,
-     "ref_books": 2
+     "ref_odds": 1.6,
+     "ref_books": 3
     },
     {
      "name": "Away team over 0.5",
@@ -2583,1064 +3620,19 @@
      "status": "PICK",
      "note": "",
      "name": "Asian handicap Away +1.5"
-    }
-   ],
-   "odds_checked": true,
-   "odds_source": "reference: median of European bookmakers"
-  },
-  {
-   "match": "Aston Villa FC v Sunderland AFC",
-   "league": "Premier League",
-   "kickoff": "2026-11-21T15:00:00Z",
-   "form_games": [
-    8,
-    8
-   ],
-   "h2h_games": 2,
-   "injuries_entered": true,
-   "data_ok": true,
-   "news": {
-    "checked": true,
-    "source": "Fantasy Premier League feed",
-    "home": [
-     {
-      "name": "Digne",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Paris Saint-Germain permanently",
-      "key": false
-     },
-     {
-      "name": "Cash",
-      "status": "doubtful",
-      "chance": 0.75,
-      "note": "Concussion - 75% chance of playing",
-      "key": true
-     },
-     {
-      "name": "A.Garc\u00eda",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Getafe on loan for the rest of the season",
-      "key": false
-     },
-     {
-      "name": "Nedeljkovic",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Rangers on loan for the rest of the season",
-      "key": false
-     },
-     {
-      "name": "Bailey",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Olympiakos permanently",
-      "key": false
-     },
-     {
-      "name": "Onana",
-      "status": "out",
-      "chance": null,
-      "note": "Knee injury - Unknown return date",
-      "key": false
-     },
-     {
-      "name": "Iling Jr",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Bolton Wanderers on loan for the rest of the season",
-      "key": false
-     },
-     {
-      "name": "Manzambi",
-      "status": "doubtful",
-      "chance": 0.75,
-      "note": "Calf injury - 75% chance of playing",
-      "key": true
-     },
-     {
-      "name": "Watkins",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Al Hilal permanently",
-      "key": false
-     },
-     {
-      "name": "Ruggeri",
-      "status": "out",
-      "chance": null,
-      "note": "Hamstring injury - Expected back 2 Jan",
-      "key": false
-     },
-     {
-      "name": "Lynch",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Oxford United on loan until January",
-      "key": false
-     },
-     {
-      "name": "Wan-Bissaka",
-      "status": "doubtful",
-      "chance": 0.5,
-      "note": "Hamstring injury - 50% chance of playing",
-      "key": false
-     }
-    ],
-    "away": [
-     {
-      "name": "Patterson",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Wrexham permanently",
-      "key": false
-     },
-     {
-      "name": "Ballard",
-      "status": "out",
-      "chance": null,
-      "note": "Hamstring injury - Unknown return date",
-      "key": true
-     },
-     {
-      "name": "Seelt",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Swansea City on loan for the rest of the season",
-      "key": false
-     },
-     {
-      "name": "Hjelde",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined KV Mechelen on loan for the rest of the season",
-      "key": false
-     },
-     {
-      "name": "Masuaku",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Konyaspor permanently",
-      "key": false
-     },
-     {
-      "name": "Diarra",
-      "status": "out",
-      "chance": null,
-      "note": "Muscular injury - Unknown return date",
-      "key": false
-     },
-     {
-      "name": "Xhaka",
-      "status": "doubtful",
-      "chance": 0.75,
-      "note": "Calf injury - 75% chance of playing",
-      "key": true
-     },
-     {
-      "name": "Adingra",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Ajax on loan for the rest of the season",
-      "key": false
-     },
-     {
-      "name": "Mundle",
-      "status": "out",
-      "chance": null,
-      "note": "Knee injury - Unknown return date",
-      "key": false
-     },
-     {
-      "name": "Brobbey",
-      "status": "doubtful",
-      "chance": 0.75,
-      "note": "Muscular injury - 75% chance of playing",
-      "key": true
-     }
-    ]
-   },
-   "xg": [
-    2.74,
-    1.01
-   ],
-   "shortlist": [
-    {
-     "name": "Asian handicap Home +1.5",
-     "market": "FT AH 1.5",
-     "outcome": "H",
-     "chance": 0.963,
-     "fair_odds": 1.04,
-     "min_odds": 1.15
     },
     {
-     "name": "Home team over 0.5",
-     "market": "FT TTH 0.5",
-     "outcome": "O",
-     "chance": 0.935,
-     "fair_odds": 1.07,
-     "min_odds": 1.15
-    },
-    {
-     "name": "Over 1.5",
-     "market": "FT OU 1.5",
-     "outcome": "O",
-     "chance": 0.888,
-     "fair_odds": 1.13,
-     "min_odds": 1.16
-    },
-    {
-     "name": "Home or Draw",
-     "market": "FT DC",
-     "outcome": "1X",
-     "chance": 0.887,
-     "fair_odds": 1.13,
-     "min_odds": 1.16,
-     "ref_odds": 1.22,
-     "ref_books": 25
-    },
-    {
-     "name": "Asian handicap Home +0.5",
-     "market": "FT AH 0.5",
-     "outcome": "H",
-     "chance": 0.887,
-     "fair_odds": 1.13,
-     "min_odds": 1.16
-    },
-    {
-     "name": "Home or Away",
-     "market": "FT DC",
-     "outcome": "12",
-     "chance": 0.85,
-     "fair_odds": 1.18,
-     "min_odds": 1.21,
-     "ref_odds": 1.27,
-     "ref_books": 25
-    },
-    {
-     "name": "1st half Over 0.5",
-     "market": "1H OU 0.5",
-     "outcome": "O",
-     "chance": 0.807,
-     "fair_odds": 1.24,
-     "min_odds": 1.28
-    },
-    {
-     "name": "Double chance 1X & Over 1.5",
-     "market": "FT DC&T1.5",
-     "outcome": "1X&O",
-     "chance": 0.798,
-     "fair_odds": 1.25,
-     "min_odds": 1.29
-    },
-    {
-     "name": "Double chance 12 & Over 1.5",
-     "market": "FT DC&T1.5",
-     "outcome": "12&O",
-     "chance": 0.761,
-     "fair_odds": 1.31,
-     "min_odds": 1.35
-    },
-    {
-     "name": "Home team over 1.5",
-     "market": "FT TTH 1.5",
-     "outcome": "O",
-     "chance": 0.758,
-     "fair_odds": 1.32,
-     "min_odds": 1.36
-    },
-    {
-     "name": "Home win",
-     "market": "FT 1X2",
-     "outcome": "H",
-     "chance": 0.736,
-     "fair_odds": 1.36,
-     "min_odds": 1.4,
-     "ref_odds": 1.8,
-     "ref_books": 25
-    },
-    {
-     "name": "Asian handicap Home -0.5",
-     "market": "FT AH -0.5",
-     "outcome": "H",
-     "chance": 0.736,
-     "fair_odds": 1.36,
-     "min_odds": 1.4,
-     "ref_odds": 1.85,
-     "ref_books": 5
-    },
-    {
-     "name": "Away team under 1.5",
-     "market": "FT TTA 1.5",
-     "outcome": "U",
-     "chance": 0.733,
-     "fair_odds": 1.36,
-     "min_odds": 1.41
-    },
-    {
-     "name": "Over 2.5",
-     "market": "FT OU 2.5",
-     "outcome": "O",
-     "chance": 0.722,
-     "fair_odds": 1.39,
-     "min_odds": 1.43,
-     "ref_odds": 1.77,
-     "ref_books": 17
-    },
-    {
-     "name": "Under 4.5",
-     "market": "FT OU 4.5",
-     "outcome": "U",
-     "chance": 0.679,
-     "fair_odds": 1.47,
-     "min_odds": 1.52
-    },
-    {
-     "name": "Double chance 12 & Over 2.5",
-     "market": "FT DC&T2.5",
-     "outcome": "12&O",
-     "chance": 0.66,
-     "fair_odds": 1.51,
-     "min_odds": 1.56
-    }
-   ],
-   "picks": [
-    {
-     "market": "FT AH -1",
-     "outcome": "H",
-     "odds": 2.52,
-     "model": 0.6122,
-     "fair": null,
-     "blended": 0.6122,
-     "edge": 0.5428,
-     "gap": 0.0,
-     "status": "PICK",
-     "note": "model only",
-     "name": "Asian handicap Home -1"
-    },
-    {
-     "market": "FT AH -0.75",
-     "outcome": "H",
-     "odds": 2.11,
-     "model": 0.6822,
-     "fair": null,
-     "blended": 0.6822,
-     "edge": 0.4395,
-     "gap": 0.0,
-     "status": "PICK",
-     "note": "model only",
-     "name": "Asian handicap Home -0.75"
-    },
-    {
-     "market": "FT OU 2.75",
-     "outcome": "O",
-     "odds": 1.99,
-     "model": 0.6703,
-     "fair": null,
-     "blended": 0.6703,
-     "edge": 0.3339,
-     "gap": 0.0,
-     "status": "PICK",
-     "note": "model only",
-     "name": "Over 2.75"
-    },
-    {
-     "market": "FT AH 0",
-     "outcome": "H",
-     "odds": 1.35,
-     "model": 0.8478,
-     "fair": null,
-     "blended": 0.8478,
-     "edge": 0.1445,
-     "gap": 0.0,
-     "status": "PICK",
-     "note": "model only",
-     "name": "Draw no bet: Home"
-    }
-   ],
-   "odds_checked": true,
-   "odds_source": "reference: median of European bookmakers"
-  },
-  {
-   "match": "Coventry City FC v Crystal Palace FC",
-   "league": "Premier League",
-   "kickoff": "2026-11-21T15:00:00Z",
-   "form_games": [
-    8,
-    8
-   ],
-   "h2h_games": 0,
-   "injuries_entered": true,
-   "data_ok": true,
-   "news": {
-    "checked": true,
-    "source": "Fantasy Premier League feed",
-    "home": [
-     {
-      "name": "Onyeka",
-      "status": "doubtful",
-      "chance": 0.5,
-      "note": "Groin injury - 50% chance of playing",
-      "key": false
-     },
-     {
-      "name": "Dovin",
-      "status": "unavailable",
-      "chance": null,
-      "note": "not included in squad.",
-      "key": false
-     },
-     {
-      "name": "Thomas",
-      "status": "doubtful",
-      "chance": 0.5,
-      "note": "Calf injury - 50% chance of playing",
-      "key": true
-     },
-     {
-      "name": "Kitching",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Sheffield United on loan for the rest of the season",
-      "key": false
-     },
-     {
-      "name": "Woolfenden",
-      "status": "out",
-      "chance": null,
-      "note": "Knee injury - Unknown return date",
-      "key": false
-     },
-     {
-      "name": "Brau",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Academico de Viseu on loan for the rest of the season",
-      "key": false
-     },
-     {
-      "name": "Amenda",
-      "status": "out",
-      "chance": null,
-      "note": "Calf injury - Unknown return date",
-      "key": false
-     },
-     {
-      "name": "Eccles",
-      "status": "out",
-      "chance": null,
-      "note": "Ankle injury - Unknown return date",
-      "key": false
-     },
-     {
-      "name": "Borges Rodrigues",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Burton Albion on loan for the rest of the season",
-      "key": false
-     },
-     {
-      "name": "Andrews",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Oxford United on loan for the rest of the season",
-      "key": false
-     },
-     {
-      "name": "Wright",
-      "status": "out",
-      "chance": null,
-      "note": "Thigh injury - Unknown return date",
-      "key": false
-     },
-     {
-      "name": "Markelo",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Shabab Al-Ahli Dubai permanently",
-      "key": false
-     },
-     {
-      "name": "Bassette",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined KVC Westerlo on loan for the rest of the season",
-      "key": false
-     }
-    ],
-    "away": [
-     {
-      "name": "Sosa",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined FC Cologne on loan for the rest of the season",
-      "key": false
-     },
-     {
-      "name": "Chadi Riad",
-      "status": "out",
-      "chance": null,
-      "note": "Knee injury - Unknown return date",
-      "key": false
-     },
-     {
-      "name": "Sarr",
-      "status": "out",
-      "chance": null,
-      "note": "Groin injury - Expected back 21 Nov",
-      "key": false
-     },
-     {
-      "name": "Devenny",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Stoke City permanently",
-      "key": false
-     },
-     {
-      "name": "Esse",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Millwall on loan for the rest of the season",
-      "key": false
-     },
-     {
-      "name": "M.Fran\u00e7a",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Alverca on loan for the rest of the season",
-      "key": false
-     },
-     {
-      "name": "J.Rak-Sakyi",
-      "status": "unavailable",
-      "chance": null,
-      "note": "has joined  Kasimpasa on loan for the rest of the seaon.",
-      "key": false
-     },
-     {
-      "name": "Cardines",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Bristol City on loan for the rest of the season",
-      "key": false
-     },
-     {
-      "name": "Strand Larsen",
-      "status": "doubtful",
-      "chance": 0.75,
-      "note": "Ankle injury - 75% chance of playing",
-      "key": true
-     },
-     {
-      "name": "Mateta",
-      "status": "suspended",
-      "chance": null,
-      "note": "Suspended until 2 Dec",
-      "key": false
-     },
-     {
-      "name": "Uche",
-      "status": "unavailable",
-      "chance": null,
-      "note": "has returned to Getafe CF",
-      "key": false
-     },
-     {
-      "name": "Tomiyasu",
-      "status": "out",
-      "chance": null,
-      "note": "Calf injury - Expected back 21 Nov",
-      "key": false
-     }
-    ]
-   },
-   "xg": [
-    2.0,
-    1.36
-   ],
-   "shortlist": [
-    {
-     "name": "Asian handicap Home +1.5",
-     "market": "FT AH 1.5",
-     "outcome": "H",
-     "chance": 0.888,
-     "fair_odds": 1.13,
-     "min_odds": 1.16
-    },
-    {
-     "name": "Home team over 0.5",
-     "market": "FT TTH 0.5",
-     "outcome": "O",
-     "chance": 0.865,
-     "fair_odds": 1.16,
-     "min_odds": 1.19
-    },
-    {
-     "name": "Over 1.5",
-     "market": "FT OU 1.5",
-     "outcome": "O",
-     "chance": 0.849,
-     "fair_odds": 1.18,
-     "min_odds": 1.21
-    },
-    {
-     "name": "Home or Away",
-     "market": "FT DC",
-     "outcome": "12",
-     "chance": 0.783,
-     "fair_odds": 1.28,
-     "min_odds": 1.31,
-     "ref_odds": 1.3,
-     "ref_books": 25
-    },
-    {
-     "name": "1st half Over 0.5",
-     "market": "1H OU 0.5",
-     "outcome": "O",
-     "chance": 0.772,
-     "fair_odds": 1.29,
-     "min_odds": 1.33
-    },
-    {
-     "name": "Under 4.5",
-     "market": "FT OU 4.5",
-     "outcome": "U",
-     "chance": 0.751,
-     "fair_odds": 1.33,
-     "min_odds": 1.37
-    },
-    {
-     "name": "Away team over 0.5",
-     "market": "FT TTA 0.5",
-     "outcome": "O",
-     "chance": 0.744,
-     "fair_odds": 1.34,
-     "min_odds": 1.38
-    },
-    {
-     "name": "Home or Draw",
-     "market": "FT DC",
-     "outcome": "1X",
-     "chance": 0.739,
-     "fair_odds": 1.35,
-     "min_odds": 1.39,
-     "ref_odds": 1.44,
-     "ref_books": 25
-    },
-    {
-     "name": "Asian handicap Home +0.5",
-     "market": "FT AH 0.5",
-     "outcome": "H",
-     "chance": 0.739,
-     "fair_odds": 1.35,
-     "min_odds": 1.39
-    },
-    {
-     "name": "Asian handicap Away +1.5",
-     "market": "FT AH -1.5",
-     "outcome": "A",
-     "chance": 0.695,
-     "fair_odds": 1.44,
-     "min_odds": 1.48
-    },
-    {
-     "name": "Double chance 12 & Over 1.5",
-     "market": "FT DC&T1.5",
-     "outcome": "12&O",
-     "chance": 0.667,
-     "fair_odds": 1.5,
-     "min_odds": 1.54
-    },
-    {
-     "name": "Over 2.5",
-     "market": "FT OU 2.5",
-     "outcome": "O",
-     "chance": 0.653,
-     "fair_odds": 1.53,
-     "min_odds": 1.58,
-     "ref_odds": 1.67,
-     "ref_books": 14
-    }
-   ],
-   "picks": [
-    {
-     "market": "FT AH 0",
-     "outcome": "H",
-     "odds": 1.81,
-     "model": 0.6422,
-     "fair": null,
-     "blended": 0.6422,
-     "edge": 0.1624,
-     "gap": 0.0,
-     "status": "PICK",
-     "note": "model only",
-     "name": "Draw no bet: Home"
-    },
-    {
-     "market": "FT OU 2.75",
-     "outcome": "O",
-     "odds": 1.9,
-     "model": 0.6012,
-     "fair": null,
-     "blended": 0.6012,
-     "edge": 0.1422,
-     "gap": 0.0,
-     "status": "PICK",
-     "note": "model only",
-     "name": "Over 2.75"
-    },
-    {
-     "market": "FT OU 2.5",
-     "outcome": "O",
-     "odds": 1.67,
-     "model": 0.6532,
-     "fair": 0.5651,
-     "blended": 0.6179,
-     "edge": 0.032,
-     "gap": 0.0881,
-     "status": "PICK",
-     "note": "",
-     "name": "Over 2.5"
-    }
-   ],
-   "odds_checked": true,
-   "odds_source": "reference: median of European bookmakers"
-  },
-  {
-   "match": "Chelsea FC v Leeds United FC",
-   "league": "Premier League",
-   "kickoff": "2026-11-21T15:00:00Z",
-   "form_games": [
-    8,
-    8
-   ],
-   "h2h_games": 2,
-   "injuries_entered": true,
-   "data_ok": true,
-   "news": {
-    "checked": true,
-    "source": "Fantasy Premier League feed",
-    "home": [
-     {
-      "name": "Martinez",
-      "status": "doubtful",
-      "chance": 0.75,
-      "note": "Head injury - 75% chance of playing",
-      "key": true
-     },
-     {
-      "name": "S\u00e1nchez",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Como on loan for the rest of the season",
-      "key": false
-     },
-     {
-      "name": "J\u00f6rgensen",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined RC Strasbourg on loan for the rest of the season",
-      "key": false
-     },
-     {
-      "name": "James",
-      "status": "out",
-      "chance": null,
-      "note": "Knee injury - Unknown return date",
-      "key": false
-     },
-     {
-      "name": "Chalobah",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Como permanently",
-      "key": false
-     },
-     {
-      "name": "B.Badiashile",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Napoli on loan for the rest of the season",
-      "key": false
-     },
-     {
-      "name": "Hato",
-      "status": "out",
-      "chance": null,
-      "note": "Unspecified injury - Unknown return date",
-      "key": false
-     },
-     {
-      "name": "M.Sarr",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Real Sociedad on loan for the rest of the season",
-      "key": false
-     },
-     {
-      "name": "Acheampong",
-      "status": "doubtful",
-      "chance": 0.75,
-      "note": "Unspecified injury - 75% chance of playing",
-      "key": true
-     },
-     {
-      "name": "Gittens",
-      "status": "out",
-      "chance": null,
-      "note": "Ankle injury - Unknown return date",
-      "key": false
-     },
-     {
-      "name": "D.Essugo",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined RC Strasbourg on loan for the rest of the season",
-      "key": false
-     },
-     {
-      "name": "Jo\u00e3o Pedro",
-      "status": "out",
-      "chance": null,
-      "note": "Thigh injury - Unknown return date",
-      "key": true
-     },
-     {
-      "name": "Marc Guiu",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined RB Leipzig permanently",
-      "key": false
-     },
-     {
-      "name": "Lacroix",
-      "status": "out",
-      "chance": null,
-      "note": "Hamstring injury - Unknown return date",
-      "key": true
-     }
-    ],
-    "away": [
-     {
-      "name": "Perri",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Torino on loan for the rest of the season",
-      "key": false
-     },
-     {
-      "name": "Gudmundsson",
-      "status": "doubtful",
-      "chance": 0.75,
-      "note": "Hamstring injury - 75% chance of playing",
-      "key": true
-     },
-     {
-      "name": "Bornauw",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined Hamburg SV on loan for the rest of the season",
-      "key": false
-     },
-     {
-      "name": "Stach",
-      "status": "doubtful",
-      "chance": 0.5,
-      "note": "Foot injury - 50% chance of playing",
-      "key": true
-     },
-     {
-      "name": "Gnonto",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined ACF Fiorentina on loan for the rest of the season",
-      "key": false
-     },
-     {
-      "name": "Harrison",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined New England Revolution permanently",
-      "key": false
-     },
-     {
-      "name": "Piroe",
-      "status": "unavailable",
-      "chance": null,
-      "note": "Has joined West Ham United on loan for the rest of the season",
-      "key": false
-     },
-     {
-      "name": "Mateo Joseph",
-      "status": "out",
-      "chance": null,
-      "note": "Knee injury - Unknown return date",
-      "key": false
-     }
-    ]
-   },
-   "xg": [
-    1.34,
-    1.24
-   ],
-   "shortlist": [
-    {
-     "name": "Under 4.5",
-     "market": "FT OU 4.5",
-     "outcome": "U",
-     "chance": 0.88,
-     "fair_odds": 1.14,
-     "min_odds": 1.17
-    },
-    {
-     "name": "Asian handicap Home +1.5",
-     "market": "FT AH 1.5",
-     "outcome": "H",
-     "chance": 0.853,
-     "fair_odds": 1.17,
-     "min_odds": 1.21
-    },
-    {
-     "name": "Asian handicap Away +1.5",
-     "market": "FT AH -1.5",
-     "outcome": "A",
-     "chance": 0.821,
-     "fair_odds": 1.22,
-     "min_odds": 1.26,
-     "ref_odds": 1.33,
-     "ref_books": 1
-    },
-    {
-     "name": "Under 3.5",
      "market": "FT OU 3.5",
      "outcome": "U",
-     "chance": 0.74,
-     "fair_odds": 1.35,
-     "min_odds": 1.39
-    },
-    {
-     "name": "Home team over 0.5",
-     "market": "FT TTH 0.5",
-     "outcome": "O",
-     "chance": 0.739,
-     "fair_odds": 1.35,
-     "min_odds": 1.39
-    },
-    {
-     "name": "Home or Away",
-     "market": "FT DC",
-     "outcome": "12",
-     "chance": 0.736,
-     "fair_odds": 1.36,
-     "min_odds": 1.4,
-     "ref_odds": 1.26,
-     "ref_books": 25
-    },
-    {
-     "name": "Over 1.5",
-     "market": "FT OU 1.5",
-     "outcome": "O",
-     "chance": 0.729,
-     "fair_odds": 1.37,
-     "min_odds": 1.41
-    },
-    {
-     "name": "Away team over 0.5",
-     "market": "FT TTA 0.5",
-     "outcome": "O",
-     "chance": 0.71,
-     "fair_odds": 1.41,
-     "min_odds": 1.45
-    },
-    {
-     "name": "1st half Under 1.5",
-     "market": "1H OU 1.5",
-     "outcome": "U",
-     "chance": 0.686,
-     "fair_odds": 1.46,
-     "min_odds": 1.5
-    },
-    {
-     "name": "1st half Over 0.5",
-     "market": "1H OU 0.5",
-     "outcome": "O",
-     "chance": 0.679,
-     "fair_odds": 1.47,
-     "min_odds": 1.52
-    },
-    {
-     "name": "Home or Draw",
-     "market": "FT DC",
-     "outcome": "1X",
-     "chance": 0.657,
-     "fair_odds": 1.52,
-     "min_odds": 1.57,
-     "ref_odds": 1.23,
-     "ref_books": 25
-    },
-    {
-     "name": "Asian handicap Home +0.5",
-     "market": "FT AH 0.5",
-     "outcome": "H",
-     "chance": 0.657,
-     "fair_odds": 1.52,
-     "min_odds": 1.57
-    }
-   ],
-   "picks": [
-    {
-     "market": "FT AH -1",
-     "outcome": "A",
-     "odds": 1.54,
-     "model": 0.7459,
-     "fair": null,
-     "blended": 0.7459,
-     "edge": 0.1486,
-     "gap": 0.0,
-     "status": "PICK",
-     "note": "model only",
-     "name": "Asian handicap Away +1"
-    },
-    {
-     "market": "FT OU 2.75",
-     "outcome": "U",
-     "odds": 1.88,
-     "model": 0.5804,
-     "fair": null,
-     "blended": 0.5804,
-     "edge": 0.0911,
-     "gap": 0.0,
-     "status": "PICK",
-     "note": "model only",
-     "name": "Under 2.75"
-    },
-    {
-     "market": "FT AH -0.5",
-     "outcome": "A",
-     "odds": 1.94,
-     "model": 0.6075,
-     "fair": 0.4948,
-     "blended": 0.5624,
-     "edge": 0.0911,
-     "gap": 0.1127,
+     "odds": 1.6,
+     "model": 0.6876,
+     "fair": 0.6107,
+     "blended": 0.6568,
+     "edge": 0.0509,
+     "gap": 0.0769,
      "status": "PICK",
      "note": "",
-     "name": "Asian handicap Away +0.5"
-    },
-    {
-     "market": "FT AH -1.5",
-     "outcome": "A",
-     "odds": 1.33,
-     "model": 0.8206,
-     "fair": 0.7058,
-     "blended": 0.7747,
-     "edge": 0.0303,
-     "gap": 0.1148,
-     "status": "PICK",
-     "note": "",
-     "name": "Asian handicap Away +1.5"
+     "name": "Under 3.5"
     }
    ],
    "odds_checked": true,
@@ -3730,7 +3722,7 @@
      "chance": 0.742,
      "fair_odds": 1.35,
      "min_odds": 1.39,
-     "ref_odds": 1.3,
+     "ref_odds": 1.31,
      "ref_books": 20
     },
     {
