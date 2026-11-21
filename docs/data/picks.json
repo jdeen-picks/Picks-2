@@ -1,42 +1,142 @@
 {
- "generated": "2026-11-20T08:51:29Z",
- "date": "2026-11-20",
+ "generated": "2026-11-21T08:47:11Z",
+ "date": "2026-11-21",
  "matches": [
   {
-   "fixture_id": 1575221,
-   "match": "Bayern M\u00fcnchen v 1. FC K\u00f6ln",
-   "league": "Bundesliga",
-   "kickoff": "2026-11-20T19:30:00+00:00",
+   "fixture_id": 1584470,
+   "match": "Gen\u00e7lerbirli\u011fi S.K. v Gaziantep FK",
+   "league": "Super Lig",
+   "kickoff": "2026-11-21T10:30:00+00:00",
    "status": "Missing data",
    "xg": null,
    "pick": null,
    "markets": []
   },
   {
-   "fixture_id": 1552827,
-   "match": "Estac Troyes v Le Havre",
-   "league": "Ligue 1",
-   "kickoff": "2026-11-20T19:45:00+00:00",
+   "fixture_id": 1557474,
+   "match": "Manchester City v Fulham",
+   "league": "Premier League",
+   "kickoff": "2026-11-21T12:30:00+00:00",
    "status": "Missing data",
    "xg": null,
    "pick": null,
    "markets": []
   },
   {
-   "fixture_id": 1558682,
-   "match": "Cercle Brugge v KVC Westerlo",
-   "league": "Belgian Pro League",
-   "kickoff": "2026-11-20T19:45:00+00:00",
-   "status": "Missing data",
-   "xg": null,
-   "pick": null,
-   "markets": []
-  },
-  {
-   "fixture_id": 1570454,
-   "match": "Athletic Club v Espanyol",
+   "fixture_id": 1570453,
+   "match": "Alaves v Deportivo La Coruna",
    "league": "La Liga",
-   "kickoff": "2026-11-20T20:00:00+00:00",
+   "kickoff": "2026-11-21T13:00:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1584466,
+   "match": "Amed v Rizespor",
+   "league": "Super Lig",
+   "kickoff": "2026-11-21T13:00:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1584469,
+   "match": "Galatasaray v Samsunspor",
+   "league": "Super Lig",
+   "kickoff": "2026-11-21T13:00:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1550200,
+   "match": "Como v Cagliari",
+   "league": "Serie A",
+   "kickoff": "2026-11-21T14:00:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1550202,
+   "match": "Lazio v Lecce",
+   "league": "Serie A",
+   "kickoff": "2026-11-21T14:00:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1575222,
+   "match": "Bayer Leverkusen v SC Paderborn 07",
+   "league": "Bundesliga",
+   "kickoff": "2026-11-21T14:30:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1575223,
+   "match": "Eintracht Frankfurt v 1899 Hoffenheim",
+   "league": "Bundesliga",
+   "kickoff": "2026-11-21T14:30:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1575225,
+   "match": "Union Berlin v RB Leipzig",
+   "league": "Bundesliga",
+   "kickoff": "2026-11-21T14:30:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1575226,
+   "match": "Borussia M\u00f6nchengladbach v Borussia Dortmund",
+   "league": "Bundesliga",
+   "kickoff": "2026-11-21T14:30:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1575229,
+   "match": "SV Elversberg v SC Freiburg",
+   "league": "Bundesliga",
+   "kickoff": "2026-11-21T14:30:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1556706,
+   "match": "Celtic v ST Mirren",
+   "league": "Scottish Premiership",
+   "kickoff": "2026-11-21T15:00:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1556708,
+   "match": "Falkirk v ST Johnstone",
+   "league": "Scottish Premiership",
+   "kickoff": "2026-11-21T15:00:00+00:00",
    "status": "Missing data",
    "xg": null,
    "pick": null,
@@ -51,6 +151,6 @@
   "profit": 0.0,
   "settled": 0
  },
- "api_calls": 21,
- "requests_remaining": "87"
+ "api_calls": 71,
+ "requests_remaining": "62"
 }
