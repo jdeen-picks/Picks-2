@@ -1,0 +1,27 @@
+BACKTEST: 3364 finished matches, 32809 shortlist rows (model chance 65% or higher)
+Each row = one market the model rated at 65%+ before kickoff, settled on the real score.
+
+chance band      rows   model says   actually won   gap
+65-70%          6816      67.5%        63.9%      -3.6
+70-75%          7200      72.5%        69.4%      -3.1
+75-80%          6568      77.4%        74.3%      -3.1
+80-85%          5075      82.3%        79.7%      -2.6
+85-90%          3784      87.3%        85.1%      -2.2
+90-100%         3366      93.2%        90.6%      -2.7
+ALL            32809      77.8%        74.8%      -3.0
+
+By market type (model says vs actually won):
+  Asian handicap           rows 7294   says  80.8%   won  80.8%
+  Team goals               rows 6558   says  77.7%   won  74.3%
+  Double chance            rows 4966   says  76.6%   won  75.8%
+  1st half goals           rows 3250   says  74.4%   won  69.9%
+  Double chance + goals    rows 2548   says  72.6%   won  64.5%
+  Over/Under 4.5           rows 2225   says  83.9%   won  85.1%
+  Over/Under 1.5           rows 2216   says  81.1%   won  79.5%
+  Over/Under 3.5           rows 1562   says  76.4%   won  70.4%
+  Over/Under 2.5           rows 1077   says  74.3%   won  59.8%
+  Both teams to score      rows  761   says  72.0%   won  59.8%
+  1X2                      rows  352   says  72.9%   won  67.9%
+
+Worst-calibrated single rows to avoid (model 80%+ but actually under 70%):
+  Over/Under 2.5: says 85% won 69% over 228 rows
