@@ -1,142 +1,142 @@
 {
- "generated": "2026-11-21T08:47:11Z",
- "date": "2026-11-21",
+ "generated": "2026-11-22T08:47:10Z",
+ "date": "2026-11-22",
  "matches": [
   {
-   "fixture_id": 1584470,
-   "match": "Gen\u00e7lerbirli\u011fi S.K. v Gaziantep FK",
+   "fixture_id": 1584468,
+   "match": "Erzurumspor FK v G\u00f6ztepe",
    "league": "Super Lig",
-   "kickoff": "2026-11-21T10:30:00+00:00",
+   "kickoff": "2026-11-22T10:30:00+00:00",
    "status": "Missing data",
    "xg": null,
    "pick": null,
    "markets": []
   },
   {
-   "fixture_id": 1557474,
-   "match": "Manchester City v Fulham",
-   "league": "Premier League",
-   "kickoff": "2026-11-21T12:30:00+00:00",
+   "fixture_id": 1552232,
+   "match": "Twente v Willem II",
+   "league": "Eredivisie",
+   "kickoff": "2026-11-22T11:15:00+00:00",
    "status": "Missing data",
    "xg": null,
    "pick": null,
    "markets": []
   },
   {
-   "fixture_id": 1570453,
-   "match": "Alaves v Deportivo La Coruna",
+   "fixture_id": 1550201,
+   "match": "Juventus v Venezia",
+   "league": "Serie A",
+   "kickoff": "2026-11-22T11:30:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1558681,
+   "match": "SK Beveren v Gent",
+   "league": "Belgian Pro League",
+   "kickoff": "2026-11-22T12:30:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1570455,
+   "match": "Barcelona v Villarreal",
    "league": "La Liga",
-   "kickoff": "2026-11-21T13:00:00+00:00",
+   "kickoff": "2026-11-22T13:00:00+00:00",
    "status": "Missing data",
    "xg": null,
    "pick": null,
    "markets": []
   },
   {
-   "fixture_id": 1584466,
-   "match": "Amed v Rizespor",
+   "fixture_id": 1584471,
+   "match": "Kas\u0131mpa\u015fa v Alanyaspor",
    "league": "Super Lig",
-   "kickoff": "2026-11-21T13:00:00+00:00",
+   "kickoff": "2026-11-22T13:00:00+00:00",
    "status": "Missing data",
    "xg": null,
    "pick": null,
    "markets": []
   },
   {
-   "fixture_id": 1584469,
-   "match": "Galatasaray v Samsunspor",
+   "fixture_id": 1584473,
+   "match": "Konyaspor v Be\u015fikta\u015f",
    "league": "Super Lig",
-   "kickoff": "2026-11-21T13:00:00+00:00",
+   "kickoff": "2026-11-22T13:00:00+00:00",
    "status": "Missing data",
    "xg": null,
    "pick": null,
    "markets": []
   },
   {
-   "fixture_id": 1550200,
-   "match": "Como v Cagliari",
+   "fixture_id": 1552225,
+   "match": "Ajax v ADO Den Haag",
+   "league": "Eredivisie",
+   "kickoff": "2026-11-22T13:30:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1552230,
+   "match": "Sparta Rotterdam v AZ Alkmaar",
+   "league": "Eredivisie",
+   "kickoff": "2026-11-22T13:30:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1550199,
+   "match": "Bologna v Udinese",
    "league": "Serie A",
-   "kickoff": "2026-11-21T14:00:00+00:00",
+   "kickoff": "2026-11-22T14:00:00+00:00",
    "status": "Missing data",
    "xg": null,
    "pick": null,
    "markets": []
   },
   {
-   "fixture_id": 1550202,
-   "match": "Lazio v Lecce",
+   "fixture_id": 1550206,
+   "match": "Sassuolo v Genoa",
    "league": "Serie A",
-   "kickoff": "2026-11-21T14:00:00+00:00",
+   "kickoff": "2026-11-22T14:00:00+00:00",
    "status": "Missing data",
    "xg": null,
    "pick": null,
    "markets": []
   },
   {
-   "fixture_id": 1575222,
-   "match": "Bayer Leverkusen v SC Paderborn 07",
+   "fixture_id": 1552825,
+   "match": "Paris FC v Angers",
+   "league": "Ligue 1",
+   "kickoff": "2026-11-22T14:00:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1557472,
+   "match": "Hull City v Brighton",
+   "league": "Premier League",
+   "kickoff": "2026-11-22T14:00:00+00:00",
+   "status": "Missing data",
+   "xg": null,
+   "pick": null,
+   "markets": []
+  },
+  {
+   "fixture_id": 1575224,
+   "match": "FC Augsburg v FSV Mainz 05",
    "league": "Bundesliga",
-   "kickoff": "2026-11-21T14:30:00+00:00",
-   "status": "Missing data",
-   "xg": null,
-   "pick": null,
-   "markets": []
-  },
-  {
-   "fixture_id": 1575223,
-   "match": "Eintracht Frankfurt v 1899 Hoffenheim",
-   "league": "Bundesliga",
-   "kickoff": "2026-11-21T14:30:00+00:00",
-   "status": "Missing data",
-   "xg": null,
-   "pick": null,
-   "markets": []
-  },
-  {
-   "fixture_id": 1575225,
-   "match": "Union Berlin v RB Leipzig",
-   "league": "Bundesliga",
-   "kickoff": "2026-11-21T14:30:00+00:00",
-   "status": "Missing data",
-   "xg": null,
-   "pick": null,
-   "markets": []
-  },
-  {
-   "fixture_id": 1575226,
-   "match": "Borussia M\u00f6nchengladbach v Borussia Dortmund",
-   "league": "Bundesliga",
-   "kickoff": "2026-11-21T14:30:00+00:00",
-   "status": "Missing data",
-   "xg": null,
-   "pick": null,
-   "markets": []
-  },
-  {
-   "fixture_id": 1575229,
-   "match": "SV Elversberg v SC Freiburg",
-   "league": "Bundesliga",
-   "kickoff": "2026-11-21T14:30:00+00:00",
-   "status": "Missing data",
-   "xg": null,
-   "pick": null,
-   "markets": []
-  },
-  {
-   "fixture_id": 1556706,
-   "match": "Celtic v ST Mirren",
-   "league": "Scottish Premiership",
-   "kickoff": "2026-11-21T15:00:00+00:00",
-   "status": "Missing data",
-   "xg": null,
-   "pick": null,
-   "markets": []
-  },
-  {
-   "fixture_id": 1556708,
-   "match": "Falkirk v ST Johnstone",
-   "league": "Scottish Premiership",
-   "kickoff": "2026-11-21T15:00:00+00:00",
+   "kickoff": "2026-11-22T14:30:00+00:00",
    "status": "Missing data",
    "xg": null,
    "pick": null,
@@ -152,5 +152,5 @@
   "settled": 0
  },
  "api_calls": 71,
- "requests_remaining": "62"
+ "requests_remaining": "68"
 }
