@@ -60,6 +60,15 @@ CORE = [("FT 1X2", None), ("FT DC", None), ("FT OU 1.5", None), ("FT OU 2.5", No
         ("FT TTH 0.5", None), ("FT TTH 1.5", None), ("FT TTA 0.5", None), ("FT TTA 1.5", None),
         ("FT DC&T1.5", None), ("FT DC&T2.5", None), ("FT DC&T3.5", None), ("1H OU 0.5", None), ("1H OU 1.5", None)]
 
+# From the 3,364-match backtest: markets the model badly overrates are blocked; the rest are shrunk to what really won.
+BLOCK = ("FT OU 2.5", "FT BTTS", "FT 1X2", "FT DC&T")
+CAL = {"FT AH": 1.0, "FT DC": 0.99, "FT OU 4.5": 1.0, "FT OU 1.5": 0.98, "FT OU 3.5": 0.92, "FT TT": 0.955, "1H": 0.94}
+def blocked(key): return any(key.startswith(b) for b in BLOCK)
+def cal(key):
+    for k, f in CAL.items():
+        if key.startswith(k): return f
+    return 0.93
+
 def label(key, o):
     """Plain-English name for a market line, as it appears on Sportybet."""
     t = key.split(" ", 1)[1] if " " in key else key; half = "1st half " if key.startswith("1H") else ""
@@ -78,8 +87,10 @@ def shortlist(lam, S, min_chance):
     """No prices needed: markets the model rates >= min_chance, with the minimum Sportybet odds that would make each worth taking."""
     P = X.price_book(lam[0], lam[1], deep=False); out = []
     for key, _ in CORE:
+        if blocked(key): continue
         for o, (w, p, l) in P.get(key, {}).items():
             if p > 1e-9: continue
+            w = w * cal(key)
             if w >= min_chance:
                 out.append(dict(name=label(key, o), market=key, outcome=o, chance=round(w, 3), fair_odds=round(1 / w, 2),
                                 min_odds=round(max(S["minO"], (1 + S["minE"]) / w), 2)))
@@ -167,7 +178,7 @@ def main():
             if book:
                 try: r = X.scan(lam[0], lam[1], book, S["minP"], S["minE"], S["minO"], S["gap"])
                 except Exception as ex: print("scan skipped:", ex); r = []
-                e["picks"] = [dict({k: (round(v, 4) if isinstance(v, float) else v) for k, v in x.items()}, name=label(x["market"], x["outcome"])) for x in r if x["status"] == "PICK"][:8]
+                e["picks"] = [dict({k: (round(v, 4) if isinstance(v, float) else v) for k, v in x.items()}, name=label(x["market"], x["outcome"])) for x in r if x["status"] == "PICK" and not blocked(x["market"]) and x["blended"] * cal(x["market"]) * x["odds"] - 1 >= S["minE"] and x["blended"] * cal(x["market"]) >= S["minP"]][:8]
         results.append(e)
     os.makedirs(OUT, exist_ok=True)
     out = dict(generated=datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None).isoformat(timespec="seconds") + "Z",
