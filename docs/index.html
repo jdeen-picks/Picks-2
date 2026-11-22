@@ -16,7 +16,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 Outfit,system
 .hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 30%,rgba(255,255,255,.22),transparent 45%);pointer-events:none}
 .hero .in{position:relative;z-index:2;max-width:720px;margin:0 auto}
 .nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:26px}
-.chip{font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);color:#fff;backdrop-filter:blur(4px)}
+.chip{border:0;cursor:pointer;font-family:inherit;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);color:#fff;backdrop-filter:blur(4px)}
 .chip.on{background:#fff;color:#b0123f}
 .copy{max-width:100%}
 h1{font:800 clamp(34px,10vw,56px)/1.02 'Playfair Display',Georgia,serif;margin:0 0 10px;letter-spacing:-.01em}
@@ -78,12 +78,17 @@ h2{font:italic 600 17px 'Playfair Display',serif;margin:14px 0 0 6px;color:var(-
 .news b{color:var(--accent)}
 .news.warn{background:var(--bad-bg);color:var(--bad)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+.lst{padding:4px 0}
+.li{display:flex;justify-content:space-between;gap:10px;align-items:center;border-top:1px dashed var(--line);padding:10px 4px}
+.li:first-child{border-top:0}.li .t{font-weight:600}.li .s{font-size:12.5px;color:var(--mute)}
+.li .r{text-align:right;white-space:nowrap}.li .r b{font:800 20px 'Playfair Display',serif;color:var(--accent)}
+.sec{font:italic 600 17px 'Playfair Display',serif;color:var(--accent);margin:0 0 6px}
 </style>
 </head>
 <body>
 <header class="hero">
   <div class="in">
-    <div class="nav"><span class="chip on">Today</span><span class="chip">Shortlist</span><span class="chip">Value check</span></div>
+    <div class="nav" id="nav"><button class="chip on" data-v="today">Today</button><button class="chip" data-v="short">Shortlist</button><button class="chip" data-v="value">Value check</button></div>
     <div class="copy">
       <h1>Daily Match <em>Picks</em></h1>
       <p class="tag serif">Smart picks. Calm stakes. Play the numbers, not the noise.</p>
@@ -94,6 +99,8 @@ h2{font:italic 600 17px 'Playfair Display',serif;margin:14px 0 0 6px;color:var(-
 <div class="wrap">
   <div id="slip"></div>
   <div id="out"></div>
+  <div id="shortV" class="card" style="display:none"></div>
+  <div id="valueV" class="card" style="display:none"></div>
   <p class="foot">For 18+ only. These are model estimates, not guarantees, and any bet can lose. Never stake money you cannot afford to lose. Check the price on your bookmaker before betting: a market is only worth taking if the odds are at or above the minimum shown.</p>
 </div>
 <script>
@@ -108,6 +115,35 @@ h2{font:italic 600 17px 'Playfair Display',serif;margin:14px 0 0 6px;color:var(-
   try{saved=JSON.parse(localStorage.getItem('odds')||'{}');}catch(e){}
   function store(){try{localStorage.setItem('odds',JSON.stringify(saved));}catch(e){}}
   function windowName(){var d=new Date(new Date().toLocaleString('en-US',{timeZone:'Africa/Accra'})).getDay();return (d>=3&&d<=6)?'Wednesday to Saturday':'Sunday to Tuesday';}
+  var allShort=[];
+  function buildShort(){
+    var b=document.getElementById('shortV');b.textContent='';b.appendChild(el('p','sec','Shortlist: strongest model chances'));
+    b.appendChild(el('p','note','Every market the model rates at 65% or better, across all games. Take it only if the bookmaker odds are at least the minimum shown.'));
+    var l=el('div','lst');
+    if(!allShort.length)l.appendChild(el('p','note','No shortlist yet. The next update runs at 07:00 Ghana time.'));
+    allShort.slice().sort(function(a,b){return b.chance-a.chance;}).slice(0,40).forEach(function(r){
+      var d=el('div','li'),a=el('div');a.appendChild(el('div','t',r.name));a.appendChild(el('div','s',r.match));
+      var c=el('div','r');c.appendChild(el('b',null,pct(r.chance)));c.appendChild(el('div','s','needs odds at least '+Number(r.min).toFixed(2)));
+      d.appendChild(a);d.appendChild(c);l.appendChild(d);});
+    b.appendChild(l);
+  }
+  function buildValue(){
+    var b=document.getElementById('valueV');b.textContent='';b.appendChild(el('p','sec','Value check: prices worth taking'));
+    b.appendChild(el('p','note','Markets where the odds you typed (or the reference price) are at or above the minimum. Higher edge means the model sees more value. Confirm each price on Sportybet.'));
+    var l=el('div','lst'),v=rows.filter(function(r){return r.odds>0&&r.odds>=r.min;}).map(function(r){r.edge=r.chance*r.odds-1;return r;}).sort(function(a,b){return b.edge-a.edge;}).slice(0,40);
+    if(!v.length)l.appendChild(el('p','note','Nothing yet. Type odds under the Today tab, or wait for reference prices on the next update.'));
+    v.forEach(function(r){var d=el('div','li'),a=el('div');a.appendChild(el('div','t',r.name));a.appendChild(el('div','s',r.match+(r.auto?' · reference price':'')));
+      var c=el('div','r');c.appendChild(el('b',null,'@ '+r.odds.toFixed(2)));c.appendChild(el('div','s','chance '+pct(r.chance)+' · edge '+Math.round(r.edge*100)+'%'));d.appendChild(a);d.appendChild(c);l.appendChild(d);});
+    b.appendChild(l);
+  }
+  function showView(v){
+    document.getElementById('out').style.display=v==='today'?'':'none';
+    document.getElementById('shortV').style.display=v==='short'?'':'none';
+    document.getElementById('valueV').style.display=v==='value'?'':'none';
+    Array.prototype.forEach.call(document.querySelectorAll('#nav .chip'),function(c){c.className='chip'+(c.getAttribute('data-v')===v?' on':'');});
+    if(v==='value')buildValue();
+  }
+  document.getElementById('nav').addEventListener('click',function(e){var v=e.target.getAttribute&&e.target.getAttribute('data-v');if(v)showView(v);});
   function slipBuild(){
     var box=document.getElementById('slip');box.textContent='';
     box.appendChild(el('h3',null,'Your 2.0 slip'));
@@ -142,7 +178,7 @@ h2{font:italic 600 17px 'Playfair Display',serif;margin:14px 0 0 6px;color:var(-
     var bar=el('div','bar'), i=el('i'); i.style.width=Math.min(100,Math.round(s.chance*100))+'%'; bar.appendChild(i);
     var l2=el('div','line2'); l2.appendChild(el('span','min','Take only if odds are at least '+Number(s.min_odds).toFixed(2)));
     var inp=el('input'); inp.type='number'; inp.step='0.01'; inp.min='1'; inp.inputMode='decimal'; inp.placeholder='Your odds';
-    var v=el('span'), sk=mname+'|'+s.market+'|'+s.outcome, reg={match:mname,name:s.name,chance:s.chance,min:s.min_odds,odds:0,auto:false};rows.push(reg);
+    var v=el('span'), sk=mname+'|'+s.market+'|'+s.outcome, reg={match:mname,name:s.name,chance:s.chance,min:s.min_odds,odds:0,auto:false};rows.push(reg);allShort.push(reg);
     var tag=null;
     function upd(){
       var x=parseFloat(inp.value);reg.odds=x>0?x:0;reg.auto=false;if(tag)tag.textContent='';
@@ -179,7 +215,7 @@ h2{font:italic 600 17px 'Playfair Display',serif;margin:14px 0 0 6px;color:var(-
       else if(m.data_ok){c.appendChild(el('p','note','No market reaches the 65% shortlist line for this game. Skip it.'));}
       out.appendChild(c);
     });
-    slipBuild();
+    buildShort();slipBuild();
   }
   fetch('data/fd_picks.json?t='+Date.now()).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).then(render)
     .catch(function(e){sub.textContent='';slipBuild();out.appendChild(el('div','card err','Could not load today\'s data ('+e.message+'). Try again in a minute.'));});
