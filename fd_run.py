@@ -25,7 +25,10 @@ class Api:
                 return data
             except urllib.error.HTTPError as e:
                 if e.code == 429: print("rate limited, waiting 60s"); time.sleep(60); continue
-                if e.code in (400, 403, 404): print("not available on this plan:", path, e.code); return None
+                if e.code in (400, 403, 404):
+                    try: body = e.read().decode()[:200]
+                    except Exception: body = ""
+                    print("not available on this plan:", path, e.code, body); return None
                 print("HTTP", e.code, path); time.sleep(8)
             except Exception as e:
                 print("request failed", path, e); time.sleep(8)
@@ -114,7 +117,13 @@ def main():
         api = Api(key, cfg["base"])
     today = datetime.date.today(); end = today + datetime.timedelta(days=days)
     codes = ",".join(cfg["competitions"])
-    fx = api.get("/matches", dateFrom=today.isoformat(), dateTo=end.isoformat(), competitions=codes) or {}
+    fx = api.get("/matches", dateFrom=today.isoformat(), dateTo=end.isoformat(), competitions=codes)
+    if not fx:                                       # combined call refused: ask each competition on its own
+        print("combined fixtures call failed; trying one competition at a time")
+        fx = {"matches": []}
+        for c in cfg["competitions"]:
+            d = api.get(f"/competitions/{c}/matches", dateFrom=today.isoformat(), dateTo=end.isoformat()) or {}
+            fx["matches"] += d.get("matches", [])
     fixtures = [m for m in fx.get("matches", []) if m["status"] in ("SCHEDULED", "TIMED") and m["competition"]["code"] in cfg["competitions"]]
     fixtures = sorted(fixtures, key=lambda m: m["utcDate"])[:cfg["max_matches"]]
     need = sorted({m["competition"]["code"] for m in fixtures} | ({"CL"} if any(m["competition"]["code"] != "CL" for m in fixtures) and "CL" in cfg["competitions"] else set()))
